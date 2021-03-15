@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="OrgCatRPA.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="OrgCatRPA.png" />
+  </ItemGroup>
+
 </Project>

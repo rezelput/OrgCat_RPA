@@ -24,5 +24,21 @@ namespace OCatRPA
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void AddProject_Click(object sender, RoutedEventArgs e)
+        {
+            NewProject nprj = new NewProject();
+            nprj.Show();
+        }
+
+        private void AddProjectRP_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            NewProject nprj = new NewProject();
+            nprj.Show();
+        }
     }
 }
