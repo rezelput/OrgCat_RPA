@@ -1,0 +1,17 @@
+﻿<Window x:Class="OCatRPA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OCatRPA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas Margin="0,-91,0,-66" RenderTransformOrigin="0.612,0.527" Width="Auto">
+        <Menu Height="27" Width="690" Canvas.Top="93">
+            <MenuItem Header="Проект">
+                <MenuItem Header="Создать"/>
+            </MenuItem>
+            <MenuItem Header="MenuItem"/>
+        </Menu>
+    </Canvas>
+</Window>
