@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OCatRPA"
         mc:Ignorable="d"
-        Title="NewProject" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="NewProject" Height="600" Width="1200">
+    <Canvas>
+        <Menu x:Name="ProjectOrg" Height="27" Canvas.Top="2" Width="475">
+            <MenuItem x:Name="ProjectMenu" Header="Файл">
+                <MenuItem x:Name="Add" Header="Создать">
+                    <MenuItem Header="Файл"/>
+                    <MenuItem Header="Класс"/>
+                    <MenuItem x:Name="AddProject" Header="Проект"/>
+                </MenuItem>
+                <MenuItem x:Name="Open" Header="Открыть">
+                    <MenuItem Header="Файл"/>
+                </MenuItem>
+                <MenuItem x:Name="Save" Header="Сохранить..." Click="Save_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="ProjectSector" Header="Проект">
+                <MenuItem Header="Управление данными"/>
+                <MenuItem Header="Свойства проекта"/>
+            </MenuItem>
+            <MenuItem x:Name="DebugMenu" Header="Отладка проекта">
+                <MenuItem x:Name="StartDebug" Header="Начать отладку"/>
+                <MenuItem x:Name="StartNoDebug" Header="Запуск проекта"/>
+            </MenuItem>
+            <MenuItem x:Name="InstrumentsMenu" Header="Инструменты">
+                <MenuItem Header="Загрузить программу"/>
+                <MenuItem Header="Генерировать код"/>
+            </MenuItem>
+            <MenuItem Header="Выход"/>
+        </Menu>
+
+    </Canvas>
 </Window>

@@ -8,10 +8,14 @@
 
   <ItemGroup>
     <None Remove="OrgCatRPA.png" />
+    <None Remove="Открыть проект %281%29.png" />
+    <None Remove="Открыть проект.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="OrgCatRPA.png" />
+    <Resource Include="Открыть проект (1).png" />
+    <Resource Include="Открыть проект.png" />
   </ItemGroup>
 
 </Project>

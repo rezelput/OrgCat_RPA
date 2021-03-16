@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OCatRPA"
         mc:Ignorable="d"
-        Title="OrgCatRPA" Height="450" Width="800">
+        Title="OrgCatRPA" Height="1080" Width="1920">
     <Canvas x:Name="OrgCatRPA" Margin="0,-91,0,-66" RenderTransformOrigin="0.612,0.527" Width="Auto">
-        <Menu x:Name="ProjectOrg" Height="27" Canvas.Top="93" Width="475">
-            <MenuItem x:Name="ProjectMenu" Header="Файл">
+        <Menu x:Name="ProjectOrg" Height="27" Canvas.Top="93" Width="539">
+            <MenuItem x:Name="ProjectMenu" Header="Файл" FontSize="14">
                 <MenuItem x:Name="Add" Header="Создать">
                     <MenuItem Header="Файл"/>
                     <MenuItem Header="Класс"/>
@@ -18,32 +18,43 @@
                     <MenuItem Header="Файл"/>
                 </MenuItem>
             </MenuItem>
-            <MenuItem x:Name="ProjectSector" Header="Проект">
+            <MenuItem x:Name="ProjectSector" Header="Проект" FontSize="14">
                 <MenuItem Header="Управление данными"/>
                 <MenuItem Header="Свойства проекта"/>
             </MenuItem>
-            <MenuItem x:Name="DebugMenu" Header="Отладка проекта">
+            <MenuItem x:Name="DebugMenu" Header="Отладка проекта" FontSize="14">
                 <MenuItem x:Name="StartDebug" Header="Начать отладку"/>
                 <MenuItem x:Name="StartNoDebug" Header="Запуск проекта"/>
             </MenuItem>
-            <MenuItem x:Name="InstrumentsMenu" Header="Инструменты">
+            <MenuItem x:Name="InstrumentsMenu" Header="Инструменты" FontSize="14">
                 <MenuItem Header="Загрузить программу"/>
                 <MenuItem Header="Генерировать код"/>
             </MenuItem>
-            <MenuItem Header="Выход" Click="MenuItem_Click"/>
+            <MenuItem Header="Выход" Click="MenuItem_Click" FontSize="14"/>
         </Menu>
-        <WrapPanel Height="225" Width="314" RenderTransformOrigin="0.565,0.444" Canvas.Left="411" Canvas.Top="156">
+        <WrapPanel Height="225" Width="314" RenderTransformOrigin="0.565,0.444" Canvas.Left="15" Canvas.Top="157">
             <TreeView>
-                <TreeViewItem x:Name="ProjectNew_RPA" Header="Проекты RPA" IsExpanded="True" Width="183">
+                <TreeViewItem x:Name="ProjectNew_RPA" Header="Проекты RPA" IsExpanded="True" Width="183" FontSize="14">
                     <TreeViewItem x:Name="AddProjectRP" Header="Создать..." MouseDoubleClick="AddProjectRP_MouseDoubleClick"/>
-                    <TreeViewItem x:Name="OpenFileRP" Header="Открыть..."/>
+                    <TreeViewItem x:Name="OpenFileRP" Header="Открыть..." MouseDoubleClick="OpenFileRP_MouseDoubleClick"/>
                 </TreeViewItem>
-                <TreeViewItem x:Name="OtherRP" Header="Расширения" IsExpanded="False">
+                <TreeViewItem x:Name="OtherRP" Header="Расширения" IsExpanded="False" FontSize="14">
                     <TreeViewItem x:Name="NewFilter" Header="Создать расширения..."/>
                     <TreeViewItem x:Name="OpenFilter" Header="Открыть расширения..."/>
                 </TreeViewItem>
             </TreeView>
         </WrapPanel>
-        <Image x:Name="Logo" Height="228" Canvas.Left="57" Canvas.Top="160" Width="329" Source="/OrgCatRPA.png"/>
+        <Image x:Name="Logo" Height="228" Canvas.Left="1064" Canvas.Top="153" Width="329" Source="/OrgCatRPA.png"/>
+        <Button x:Name="OpenProjectButton" Content="" Canvas.Left="320" Canvas.Top="153" Height="141" Width="176" Click="OpenProjectButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Открыть проект.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Canvas.Left="512" Canvas.Top="153" Height="140" Width="176">
+            <Button.Background>
+                <ImageBrush ImageSource="/Открыть проект (1).png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="ListPathBox" Canvas.Left="18" Canvas.Top="345" Text="Путь к файлу..." TextWrapping="Wrap" Width="184" Height="34"/>
     </Canvas>
 </Window>

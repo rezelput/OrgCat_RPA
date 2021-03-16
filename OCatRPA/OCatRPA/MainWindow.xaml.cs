@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.WebRequestMethods;
 
 namespace OCatRPA
 {
@@ -33,12 +35,25 @@ namespace OCatRPA
         {
             NewProject nprj = new NewProject();
             nprj.Show();
+            
         }
 
         private void AddProjectRP_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             NewProject nprj = new NewProject();
             nprj.Show();
+        }
+
+        private void OpenProjectButton_Click(object sender, RoutedEventArgs e)
+        {
+            fileDialog opd = new fileDialog();
+            opd.OpenDialogStartPage();
+        }
+
+        private void OpenFileRP_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            fileDialog opd = new fileDialog();
+            opd.OpenDialogStartPage();
         }
     }
 }
