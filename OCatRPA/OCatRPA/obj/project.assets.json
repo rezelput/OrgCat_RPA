@@ -1,11 +1,39 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "Microsoft.VisualStudio.Shell.15.0/16.9.31025.104": {
+        "type": "package",
+        "compile": {
+          "lib/net472/Microsoft.VisualStudio.Shell.15.0.dll": {}
+        },
+        "runtime": {
+          "lib/net472/Microsoft.VisualStudio.Shell.15.0.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.VisualStudio.Shell.15.0/16.9.31025.104": {
+      "sha512": "fFI6HOmV5W2zCj21U7SLxtTy57irj0JE/dFSPy6j73wI3MlNv3hmlAgjkxfvDgBBV562I0LgJ/OeikucNT9Ktw==",
+      "type": "package",
+      "path": "microsoft.visualstudio.shell.15.0/16.9.31025.104",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PackageIcon.png",
+        "lib/net472/Microsoft.VisualStudio.Shell.15.0.dll",
+        "lib/net472/Microsoft.VisualStudio.Shell.15.0.xml",
+        "microsoft.visualstudio.shell.15.0.16.9.31025.104.nupkg.sha512",
+        "microsoft.visualstudio.shell.15.0.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "Microsoft.VisualStudio.Shell.15.0 >= 16.9.31025.104"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\milky\\.nuget\\packages\\": {}
@@ -45,6 +73,12 @@
     "frameworks": {
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "Microsoft.VisualStudio.Shell.15.0": {
+            "target": "Package",
+            "version": "[16.9.31025.104, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -66,5 +100,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Microsoft.VisualStudio.Shell.15.0 16.9.31025.104\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net5.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Microsoft.VisualStudio.Shell.15.0",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }

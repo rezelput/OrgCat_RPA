@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OCatRPA"
         mc:Ignorable="d"
-        Title="NewProject" Height="600" Width="1200">
-    <Canvas>
+        Title="NewProject" Height="620" Width="1400">
+    <Canvas Margin="0,0,0,-267">
         <Menu x:Name="ProjectOrg" Height="27" Canvas.Top="2" Width="475">
             <MenuItem x:Name="ProjectMenu" Header="Файл">
                 <MenuItem x:Name="Add" Header="Создать">
@@ -30,9 +30,24 @@
             <MenuItem x:Name="InstrumentsMenu" Header="Инструменты">
                 <MenuItem Header="Загрузить программу"/>
                 <MenuItem Header="Генерировать код"/>
+                <MenuItem Header="Выполнить"/>
             </MenuItem>
-            <MenuItem Header="Выход"/>
+            <MenuItem x:Name="ExitForm" Header="Выход" Click="ExitForm_Click"/>
         </Menu>
+        <Border x:Name="BorderProject" BorderThickness="1" BorderBrush="Black" Height="542" Width="674" Canvas.Left="10" Canvas.Top="32.04">
+            <ListBox x:Name="textBorder" Margin="9,7,9,9"/>
+        </Border>
+        <Canvas Height="535" Width="624" Canvas.Left="741.6" Canvas.Top="32.04">
+            <Button Content="Button" Canvas.Left="23" Canvas.Top="18" Height="79" Width="95"/>
+            <Button Content="Button" Canvas.Left="147" Canvas.Top="18" Height="79" Width="95"/>
+            <Button Content="Button" Canvas.Left="269" Canvas.Top="19" Height="79" Width="95"/>
+            <Button Content="Button" Canvas.Left="391" Canvas.Top="19" Height="79" Width="95"/>
+            <Button Content="Button" Canvas.Left="510.412" Canvas.Top="19" Height="79" Width="95"/>
+        </Canvas>
+        <ProgressBar Height="18" Canvas.Left="26.33" Canvas.Top="1046.04" Width="1222"
+                     IsIndeterminate="False"/>
+        <ProgressBar Height="20" Canvas.Left="10" Canvas.Top="579.04" Width="674"
+                     IsIndeterminate="False"/>
 
     </Canvas>
 </Window>

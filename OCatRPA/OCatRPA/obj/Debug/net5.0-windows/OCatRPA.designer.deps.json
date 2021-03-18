@@ -5,7 +5,24 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v5.0": {}
+    ".NETCoreApp,Version=v5.0": {
+      "Microsoft.VisualStudio.Shell.15.0/16.9.31025.104": {
+        "runtime": {
+          "lib/net472/Microsoft.VisualStudio.Shell.15.0.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.9.31025.104"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "Microsoft.VisualStudio.Shell.15.0/16.9.31025.104": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fFI6HOmV5W2zCj21U7SLxtTy57irj0JE/dFSPy6j73wI3MlNv3hmlAgjkxfvDgBBV562I0LgJ/OeikucNT9Ktw==",
+      "path": "microsoft.visualstudio.shell.15.0/16.9.31025.104",
+      "hashPath": "microsoft.visualstudio.shell.15.0.16.9.31025.104.nupkg.sha512"
+    }
+  }
 }

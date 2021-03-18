@@ -19,6 +19,8 @@ namespace OCatRPA
     /// </summary>
     public partial class NewProject : Window
     {
+        public bool UpdateInForm = false;
+
         public NewProject()
         {
             InitializeComponent();
@@ -27,6 +29,28 @@ namespace OCatRPA
         private void Save_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void text_Border_TextChanged(object sender, RoutedEventArgs e)
+        {
+            UpdateInForm = true;
+        }
+
+        private void ExitForm_Click(object sender, RoutedEventArgs e)
+        {
+            if (UpdateInForm)
+            {
+                MessageBoxResult result = MessageBox.Show("Сохранить изменения?", "Внимание",
+                    MessageBoxButton.YesNo, 
+                    MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    // Сохраняем
+                }
+                else if (result == MessageBoxResult.No)
+                {
+                    Application.Current.Shutdown();
+                }
+            }
         }
     }
 }

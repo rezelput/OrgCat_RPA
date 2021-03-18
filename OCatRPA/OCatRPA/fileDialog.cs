@@ -12,8 +12,7 @@ namespace OCatRPA
     class fileDialog:MainWindow
     {
         Microsoft.Win32.OpenFileDialog dialog;
-        Microsoft.Win32.SaveFileDialog SaveFile;
-        string name;
+       
         
 
         public void OpenDialogStartPage()
@@ -31,17 +30,6 @@ namespace OCatRPA
             }
         }
 
-        public void SaveFileNewPrj()
-        {
-            SaveFile = new Microsoft.Win32.SaveFileDialog();
-            SaveFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            SaveFile.FilterIndex = 2;
-            SaveFile.RestoreDirectory = true;
-            if (SaveFile.ShowDialog() == true)
-            {
-                name = SaveFile.FileName;
-                File.WriteAllText(name,/* textBox1.Text */); //сохранение проекта 
-            }
-        }
+       
     }
 }
