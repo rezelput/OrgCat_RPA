@@ -28,7 +28,8 @@ namespace OCatRPA
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            saveDialog smv = new saveDialog();
+            smv.SaveFileNewPrj();
         }
         private void text_Border_TextChanged(object sender, RoutedEventArgs e)
         {
@@ -37,20 +38,37 @@ namespace OCatRPA
 
         private void ExitForm_Click(object sender, RoutedEventArgs e)
         {
-            if (UpdateInForm)
-            {
-                MessageBoxResult result = MessageBox.Show("Сохранить изменения?", "Внимание",
+                    MessageBoxResult result = MessageBox.Show("Сохранить изменения?", "Внимание",
                     MessageBoxButton.YesNo, 
                     MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    // Сохраняем
+                    saveDialog smv = new saveDialog();
+                    smv.SaveFileNewPrj();
                 }
                 else if (result == MessageBoxResult.No)
                 {
                     Application.Current.Shutdown();
                 }
-            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string text_begin = "begin";
+            ListBox.AppendText( text_begin + Environment.NewLine);
+        }
+
+        private void ButtonEnd_Click(object sender, RoutedEventArgs e)
+        {
+            string text_end = "end";
+            ListBox.AppendText(text_end + Environment.NewLine);
+        }
+
+        
+
+        private void ClearListBox_Click(object sender, RoutedEventArgs e)
+        {
+            ListBox.Clear();
         }
     }
 }

@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="16.9.31025.104" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="OrgCatRPA.png" />
     <Resource Include="Открыть проект (1).png" />
     <Resource Include="Открыть проект.png" />

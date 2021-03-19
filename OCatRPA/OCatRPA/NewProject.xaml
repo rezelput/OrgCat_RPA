@@ -31,21 +31,43 @@
                 <MenuItem Header="Загрузить программу"/>
                 <MenuItem Header="Генерировать код"/>
                 <MenuItem Header="Выполнить"/>
+                <MenuItem x:Name="ClearListBox" Header="Очистить" 
+                          Click="ClearListBox_Click"/>
             </MenuItem>
             <MenuItem x:Name="ExitForm" Header="Выход" Click="ExitForm_Click"/>
         </Menu>
         <Border x:Name="BorderProject" BorderThickness="1" BorderBrush="Black" Height="542" Width="674" Canvas.Left="10" Canvas.Top="32.04">
-            <ListBox x:Name="textBorder" Margin="9,7,9,9"/>
+            <TextBox x:Name="ListBox" TextWrapping="Wrap"/>
         </Border>
-        <Canvas Height="535" Width="624" Canvas.Left="741.6" Canvas.Top="32.04">
-            <Button Content="Button" Canvas.Left="23" Canvas.Top="18" Height="79" Width="95"/>
-            <Button Content="Button" Canvas.Left="147" Canvas.Top="18" Height="79" Width="95"/>
-            <Button Content="Button" Canvas.Left="269" Canvas.Top="19" Height="79" Width="95"/>
-            <Button Content="Button" Canvas.Left="391" Canvas.Top="19" Height="79" Width="95"/>
-            <Button Content="Button" Canvas.Left="510.412" Canvas.Top="19" Height="79" Width="95"/>
+        <Canvas Canvas.Left="741.6" Canvas.Top="32.04" Height="535" Width="624">
+            <Button Content="Begin" Canvas.Left="62" Canvas.Top="50" Height="79" Width="95" Click="Button_Click"/>
+            <GroupBox Header="Блоки начала действия" Height="129" Width="561" Canvas.Left="20" Canvas.Top="22" RenderTransformOrigin="0.5,0.5">
+                <GroupBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.517"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-1.791"/>
+                    </TransformGroup>
+                </GroupBox.RenderTransform>
+            </GroupBox>
+            <ScrollBar Canvas.Left="602" Canvas.Top="2" Height="530" Width="18"/>
+            <Button x:Name="BtnEnd" Content="End" Canvas.Left="186" Canvas.Top="51" Height="79" Width="95"
+                    Click="ButtonEnd_Click"/>
+            <GroupBox Header="Блоки циклов" Height="128" Width="561" Canvas.Left="22" Canvas.Top="178" RenderTransformOrigin="0.5,0.5">
+                <GroupBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.517"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-1.791"/>
+                    </TransformGroup>
+                </GroupBox.RenderTransform>
+                <Button Content="If" Height="79" Margin="37,0,417,0"/>
+            </GroupBox>
+            <Button Content="For" Canvas.Left="187" Canvas.Top="208" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"/>
+            <Button Content="While" Canvas.Left="307" Canvas.Top="207" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"/>
         </Canvas>
-        <ProgressBar Height="18" Canvas.Left="26.33" Canvas.Top="1046.04" Width="1222"
-                     IsIndeterminate="False"/>
         <ProgressBar Height="20" Canvas.Left="10" Canvas.Top="579.04" Width="674"
                      IsIndeterminate="False"/>
 
