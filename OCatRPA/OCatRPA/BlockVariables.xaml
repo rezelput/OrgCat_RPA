@@ -1,0 +1,21 @@
+﻿<Window x:Class="OCatRPA.BlockVariables"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OCatRPA"
+        mc:Ignorable="d"
+        Title="BlockVariables" Height="192" Width="488">
+    <Grid Margin="0,0,188,0">
+        <TextBox x:Name="BlockNameVar" HorizontalAlignment="Left" Margin="22,0,0,0" Text="Имя переменной" TextWrapping="Wrap" VerticalAlignment="Center" Width="112" Height="24"/>
+        <Label Content="=" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.088,0.541" FontSize="14"/>
+        <TextBox x:Name="StringVar" HorizontalAlignment="Left" Margin="159,0,0,0" Text="Значение" TextWrapping="Wrap" VerticalAlignment="Center" Width="114" Height="24"/>
+        <RadioButton x:Name="blockIfFlow" Content="If" HorizontalAlignment="Left" Margin="19,48,0,0" VerticalAlignment="Top"
+                    Checked="RadioButton_Checked" />
+        <RadioButton x:Name="BlockForFlow" Content="For" HorizontalAlignment="Left" Margin="61,48,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="BlockWhileFlow" Content="While" HorizontalAlignment="Left" Margin="107,48,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ApplyFlow" Content="Применить" HorizontalAlignment="Left" Margin="22,124,0,0" VerticalAlignment="Top" Height="24" Width="100"
+                Click="ApplyFlow_Click"/>
+
+    </Grid>
+</Window>

@@ -24,3 +24,5 @@ D:\GitHub\OrgCat_RPA\OCatRPA\OCatRPA\obj\Debug\net5.0-windows\MainWindow.g.cs
 D:\GitHub\OrgCat_RPA\OCatRPA\OCatRPA\obj\Debug\net5.0-windows\MainWindow.baml
 D:\GitHub\OrgCat_RPA\OCatRPA\OCatRPA\bin\Debug\net5.0-windows\Microsoft.VisualStudio.Shell.15.0.dll
 D:\GitHub\OrgCat_RPA\OCatRPA\OCatRPA\obj\Debug\net5.0-windows\OCatRPA.csproj.CopyComplete
+D:\GitHub\OrgCat_RPA\OCatRPA\OCatRPA\obj\Debug\net5.0-windows\BlockVariables.g.cs
+D:\GitHub\OrgCat_RPA\OCatRPA\OCatRPA\obj\Debug\net5.0-windows\BlockVariables.baml

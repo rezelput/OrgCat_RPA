@@ -63,7 +63,8 @@
                         <TranslateTransform X="-1.791"/>
                     </TransformGroup>
                 </GroupBox.RenderTransform>
-                <Button Content="If" Height="79" Margin="37,0,417,0"/>
+                <Button x:Name="IfClick" Content="If" Height="79" Margin="37,0,417,0"
+                        Click="IfClick_Click"/>
             </GroupBox>
             <Button Content="For" Canvas.Left="187" Canvas.Top="208" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"/>
             <Button Content="While" Canvas.Left="307" Canvas.Top="207" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"/>

@@ -63,12 +63,17 @@ namespace OCatRPA
             string text_end = "end";
             ListBox.AppendText(text_end + Environment.NewLine);
         }
-
-        
-
         private void ClearListBox_Click(object sender, RoutedEventArgs e)
         {
             ListBox.Clear();
+        }
+
+        private void IfClick_Click(object sender, RoutedEventArgs e)
+        {
+            string BlockIf = "if";
+            ListBox.AppendText(BlockIf + Environment.NewLine);
+            BlockVariables bkv = new BlockVariables();
+            bkv.Show();
         }
     }
 }
