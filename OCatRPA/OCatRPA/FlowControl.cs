@@ -14,8 +14,11 @@ namespace OCatRPA
 
         public void BlogIfFlow()
         {
+            string BlockIf = "if";
+            ListBox.AppendText(BlockIf + Environment.NewLine);
             BlockVariables bkv = new BlockVariables();
             ListBox.AppendText(bkv.BlockNameVar.Text + "=" + bkv.StringVar + Environment.NewLine);
+            bkv.Close();
         }
     }
 }
