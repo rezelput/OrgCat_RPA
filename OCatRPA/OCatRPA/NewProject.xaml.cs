@@ -67,7 +67,7 @@ namespace OCatRPA
         }
         private void ClearListBox_Click(object sender, RoutedEventArgs e)
         {
-            ListBox.Clear();
+            ListBox.Document.Blocks.Clear();
         }
 
         private void IfClick_Click(object sender, RoutedEventArgs e)
@@ -94,6 +94,16 @@ namespace OCatRPA
         {
             LoadFilePrj flg = new LoadFilePrj();
             flg.LoadFiletoPrjc();
+        }
+
+        private void Btn_EnterData_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GetDatabtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

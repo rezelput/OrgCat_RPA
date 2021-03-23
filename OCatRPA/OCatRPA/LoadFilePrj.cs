@@ -21,7 +21,7 @@ namespace OCatRPA
                 string filename = dlg.FileName;
                 ProgBar_Flow.Value = 100;
                 StreamReader rdr = new StreamReader(dlg.FileName, Encoding.Default);
-                ListBox.Text += rdr.ReadToEnd();
+                ListBox.AppendText(rdr.ReadToEnd());
                 rdr.Close();
             }
         }

@@ -38,7 +38,13 @@
             <MenuItem x:Name="ExitForm" Header="Выход" Click="ExitForm_Click"/>
         </Menu>
         <Border x:Name="BorderProject" BorderThickness="1" BorderBrush="Black" Height="542" Width="674" Canvas.Left="10" Canvas.Top="32.04">
-            <TextBox x:Name="ListBox" TextWrapping="Wrap"/>
+            <RichTextBox x:Name="ListBox">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
         </Border>
         <Canvas Canvas.Left="741.6" Canvas.Top="32.04" Height="535" Width="624">
             <Button Content="Begin" Canvas.Left="62" Canvas.Top="50" Height="79" Width="95" Click="Button_Click"/>
@@ -64,14 +70,30 @@
                         <TranslateTransform X="-1.791"/>
                     </TransformGroup>
                 </GroupBox.RenderTransform>
-                <Button x:Name="btn_if" Content="If" Height="79" Margin="37,0,417,0"
-                        Click="IfClick_Click"/>
+                <Button x:Name="btn_if_Copy" Content="If" Height="79" Margin="37,0,417,0"
+                    Click="IfClick_Click"/>
             </GroupBox>
             <Button x:Name="BtnForClick" Content="For" Canvas.Left="187" Canvas.Top="208" Height="79" Width="95"
                     RenderTransformOrigin="0.489,0.619"
                     Click="BtnForClick_Click"/>
             <Button x:Name="BtnWhileClick" Content="While" Canvas.Left="307" Canvas.Top="207" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"
                     Click="BtnWhileClick_Click"/>
+            <GroupBox Header="Алгоритмы" Height="128" Width="561" Canvas.Left="19" Canvas.Top="338" RenderTransformOrigin="0.5,0.5">
+                <GroupBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.517"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-1.791"/>
+                    </TransformGroup>
+                </GroupBox.RenderTransform>
+                <Button x:Name="enterDatabtn" Content="EnterData" Height="79" Margin="42,0,412,0"
+                    Click="Btn_EnterData_Click"/>
+
+            </GroupBox>
+            <Button x:Name="GetDatabtn" Content="GetData" Canvas.Left="190" Canvas.Top="366"
+                    Height="79" Width="95"
+                    Click="GetDatabtn_Click"/>
         </Canvas>
         <ProgressBar x:Name="ProgBar_Flow" Height="20" Canvas.Left="10" Canvas.Top="579.04" Width="674"
                      IsIndeterminate="False" />

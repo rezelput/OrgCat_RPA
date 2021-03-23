@@ -28,7 +28,7 @@ namespace OCatRPA
                 // Open document
                 string filename = dialog.FileName;
                 NewProject nwp = new NewProject();
-                nwp.ListBox.Text = filename;
+                nwp.ListBox.AppendText(filename);
             }
         }
     }
