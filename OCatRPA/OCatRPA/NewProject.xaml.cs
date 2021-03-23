@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,6 +57,7 @@ namespace OCatRPA
         {
             string text_begin = "begin";
             ListBox.AppendText( text_begin + Environment.NewLine);
+
         }
 
         private void ButtonEnd_Click(object sender, RoutedEventArgs e)
@@ -70,10 +72,28 @@ namespace OCatRPA
 
         private void IfClick_Click(object sender, RoutedEventArgs e)
         {
-            string BlockIf = "if";
-            ListBox.AppendText(BlockIf + Environment.NewLine);
             BlockVariables bkv = new BlockVariables();
             bkv.Show();
+
+        }
+
+        private void BtnForClick_Click(object sender, RoutedEventArgs e)
+        {
+            string blv_for = "for";
+            BlockVariables bkv = new BlockVariables();
+            ListBox.AppendText(blv_for + Environment.NewLine);
+            bkv.Show();
+        }
+
+        private void BtnWhileClick_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoadProg_Click(object sender, RoutedEventArgs e)
+        {
+            LoadFilePrj flg = new LoadFilePrj();
+            flg.LoadFiletoPrjc();
         }
     }
 }

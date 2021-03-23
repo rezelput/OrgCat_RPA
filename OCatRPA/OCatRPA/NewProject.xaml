@@ -28,7 +28,8 @@
                 <MenuItem x:Name="StartNoDebug" Header="Запуск проекта"/>
             </MenuItem>
             <MenuItem x:Name="InstrumentsMenu" Header="Инструменты">
-                <MenuItem Header="Загрузить программу"/>
+                <MenuItem x:Name="LoadProg" Header="Загрузить программу"
+                          Click="LoadProg_Click"/>
                 <MenuItem Header="Генерировать код"/>
                 <MenuItem Header="Выполнить"/>
                 <MenuItem x:Name="ClearListBox" Header="Очистить" 
@@ -63,14 +64,17 @@
                         <TranslateTransform X="-1.791"/>
                     </TransformGroup>
                 </GroupBox.RenderTransform>
-                <Button x:Name="IfClick" Content="If" Height="79" Margin="37,0,417,0"
+                <Button x:Name="btn_if" Content="If" Height="79" Margin="37,0,417,0"
                         Click="IfClick_Click"/>
             </GroupBox>
-            <Button Content="For" Canvas.Left="187" Canvas.Top="208" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"/>
-            <Button Content="While" Canvas.Left="307" Canvas.Top="207" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"/>
+            <Button x:Name="BtnForClick" Content="For" Canvas.Left="187" Canvas.Top="208" Height="79" Width="95"
+                    RenderTransformOrigin="0.489,0.619"
+                    Click="BtnForClick_Click"/>
+            <Button x:Name="BtnWhileClick" Content="While" Canvas.Left="307" Canvas.Top="207" Height="79" Width="95" RenderTransformOrigin="0.489,0.619"
+                    Click="BtnWhileClick_Click"/>
         </Canvas>
-        <ProgressBar Height="20" Canvas.Left="10" Canvas.Top="579.04" Width="674"
-                     IsIndeterminate="False"/>
+        <ProgressBar x:Name="ProgBar_Flow" Height="20" Canvas.Left="10" Canvas.Top="579.04" Width="674"
+                     IsIndeterminate="False" />
 
     </Canvas>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OCatRPA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +12,18 @@ namespace OCatRPA
         string BlockIf;
         string BlockFor;
         string BlockWhile;
-
+        BlockVariables bkv = new BlockVariables();
+        public void FlowBlockCtrl(string blcif, string blc4, string blcwh)
+        {
+            this.BlockIf = blcif;
+            this.BlockFor = blc4;
+            this.BlockWhile = blcwh;
+        }
         public void BlogIfFlow()
         {
-            string BlockIf = "if";
-            ListBox.AppendText(BlockIf + Environment.NewLine);
-            BlockVariables bkv = new BlockVariables();
-            ListBox.AppendText(bkv.BlockNameVar.Text + "=" + bkv.StringVar + Environment.NewLine);
-            bkv.Close();
+            string blcif = "if";
+            ListBox.AppendText(blcif + Environment.NewLine);
+            ListBox.AppendText(bkv.BlockNameVar.Text + "=" + bkv.StringVar.Text + Environment.NewLine);
         }
     }
 }

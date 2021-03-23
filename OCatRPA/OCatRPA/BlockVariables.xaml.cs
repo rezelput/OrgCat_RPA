@@ -23,7 +23,11 @@ namespace OCatRPA
         {
             InitializeComponent();
         }
-
+        public string IfBlockSet
+        {
+            get { return BlockNameVar.Text; }
+            set { BlockNameVar.Text = value; }
+        }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
@@ -32,11 +36,28 @@ namespace OCatRPA
 
          private void ApplyFlow_Click(object sender, RoutedEventArgs e)
         {
-            NewProject np = new NewProject();
-            if (blockIfFlow.IsChecked == true)
-                {
-                np.ListBox.AppendText(BlockNameVar.Text + "=" + StringVar + Environment.NewLine);
-            }
+              FlowControl fcl = new FlowControl();
+              if (blockIfFlow.IsChecked == true)
+              {
+                  fcl.BlogIfFlow();
+              }
+              if (BlockForFlow.IsChecked == true)
+              {
+                NewProject nwp = new NewProject();
+                nwp.ListBox.AppendText(BlockNameVar.Text + "=" + StringVar.Text + Environment.NewLine);
+                this.Close();
+               }
+           /* else if (blockIfFlow.IsChecked == false)
+              {
+                  MessageBoxResult result = MessageBox.Show("Не выбран оператор цикла", "ВНИМАНИЕ",
+                  MessageBoxButton.OK,
+                  MessageBoxImage.Warning);
+                  if (result == MessageBoxResult.OK)
+                  {
+                      this.Close();
+                  }
+              }
+             */ 
         }
     }
 }

@@ -12,8 +12,8 @@ namespace OCatRPA
     class fileDialog:MainWindow
     {
         Microsoft.Win32.OpenFileDialog dialog;
-       
-        
+        NewProject nwp = new NewProject();
+
 
         public void OpenDialogStartPage()
         {
@@ -27,9 +27,9 @@ namespace OCatRPA
             {
                 // Open document
                 string filename = dialog.FileName;
+                NewProject nwp = new NewProject();
+                nwp.ListBox.Text = filename;
             }
         }
-
-       
     }
 }
