@@ -177,9 +177,9 @@
             this.label3.Location = new System.Drawing.Point(17, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 37);
+            this.label3.Size = new System.Drawing.Size(390, 37);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Recent Files";
+            this.label3.Text = "Недавно открытые файлы";
             // 
             // lstScriptActions
             // 
