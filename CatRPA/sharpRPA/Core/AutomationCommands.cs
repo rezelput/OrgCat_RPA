@@ -542,7 +542,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region Misc Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("Misc Commands")]
+    [Attributes.ClassAttributes.Group("Другое")]
     [Attributes.ClassAttributes.Description("This command pauses the script for a set amount of time in milliseconds.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Thread.Sleep' to achieve automation.")]
     public class PauseCommand : ScriptCommand
@@ -569,7 +569,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Misc Commands")]
+    [Attributes.ClassAttributes.Group("Другое")]
     [Attributes.ClassAttributes.Description("This command pauses the script for a set amount of time in milliseconds.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Thread.Sleep' to achieve automation.")]
     public class ErrorHandlingCommand : ScriptCommand
@@ -599,7 +599,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Misc Commands")]
+    [Attributes.ClassAttributes.Group("Другое")]
     [Attributes.ClassAttributes.Description("This command allows you to add an in-line comment to the configuration.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command is for visual purposes only")]
     public class CommentCommand : ScriptCommand
@@ -618,7 +618,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Misc Commands")]
+    [Attributes.ClassAttributes.Group("Другое")]
     [Attributes.ClassAttributes.Description("This command allows you to show a MessageBox and supports variables.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'MessageBox' and invokes VariableCommand to find variable data.")]
     public class MessageBoxCommand : ScriptCommand
@@ -1177,7 +1177,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region Input Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("Input Commands")]
+    [Attributes.ClassAttributes.Group("Команды ввода")]
     [Attributes.ClassAttributes.Description("Use this command to send key strokes to the current or a targeted window.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Windows.Forms.SendKeys' method to achieve automation.")]
     public class SendKeysCommand : ScriptCommand
@@ -1192,8 +1192,8 @@ namespace sharpRPA.Core.AutomationCommands
 
         public SendKeysCommand()
         {
-            this.CommandName = "SendKeysCommand";
-            this.SelectionName = "Send Keystrokes";
+            this.CommandName = "Горячие клавиши";
+            this.SelectionName = "Выбрать ГК";
             this.CommandEnabled = true;
         }
 
@@ -1218,7 +1218,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Input Commands")]
+    [Attributes.ClassAttributes.Group("Команды ввода")]
     [Attributes.ClassAttributes.Description("Use this command to simulate mouse movement and click the mouse on coordinates.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'SetCursorPos' function from user32.dll to achieve automation.")]
     public class SendMouseMoveCommand : ScriptCommand
@@ -1245,8 +1245,8 @@ namespace sharpRPA.Core.AutomationCommands
 
         public SendMouseMoveCommand()
         {
-            this.CommandName = "SendMouseMoveCommand";
-            this.SelectionName = "Send Mouse Move";
+            this.CommandName = "Выбрать движение мыши";
+            this.SelectionName = "Добавить движение мыши";
             this.CommandEnabled = true;
         }
 
@@ -1262,7 +1262,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Input Commands")]
+    [Attributes.ClassAttributes.Group("Команды ввода")]
     [Attributes.ClassAttributes.Description("This command clicks an item in a Thick Application window.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Windows UI Automation' to find elements and invokes a SendMouseMove Command to click and achieve automation")]
     public class ThickAppClickItemCommand : ScriptCommand
@@ -1338,7 +1338,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Input Commands")]
+    [Attributes.ClassAttributes.Group("Команды ввода")]
     [Attributes.ClassAttributes.Description("This command gets text from a Thick Application window and assigns it to a variable.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Windows UI Automation' to find elements and invokes a Variable Command to assign data and achieve automation")]
     public class ThickAppGetTextCommand : ScriptCommand
