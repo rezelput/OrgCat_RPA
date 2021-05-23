@@ -31,20 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScriptBuilder));
             this.tlpControls = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblCoordinatorInfo = new System.Windows.Forms.Label();
-            this.lblMainLogo = new System.Windows.Forms.Label();
-            this.pnlStatus = new System.Windows.Forms.Panel();
-            this.pnlControlContainer = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lstContextStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.enableSelectedCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disableSelectedCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pauseBeforeExecutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copySelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new sharpRPA.UI.CustomControls.UISplitContainer();
             this.tvCommands = new sharpRPA.UI.CustomControls.UITreeView();
             this.pnlCommandHelper = new System.Windows.Forms.Panel();
@@ -52,41 +38,52 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lstScriptActions = new sharpRPA.UI.CustomControls.UIListView();
             this.commandColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblCoordinatorInfo = new System.Windows.Forms.Label();
+            this.lblMainLogo = new System.Windows.Forms.Label();
+            this.pnlStatus = new System.Windows.Forms.Panel();
+            this.pnlControlContainer = new System.Windows.Forms.Panel();
+            this.ExitBtn = new sharpRPA.UI.CustomControls.UIPictureButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.uiGroupBox3 = new sharpRPA.UI.CustomControls.UIGroupBox();
             this.uiBtnRunScript = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiBtnScheduleManagement = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiGroupBox1 = new sharpRPA.UI.CustomControls.UIGroupBox();
-            this.uiBtnCommandExplorer = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiBtnAddCommand = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiBtnAddVariable = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiGroupBox2 = new sharpRPA.UI.CustomControls.UIGroupBox();
-            this.uiBtnSettings = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiBtnSave = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiBtnNew = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.uiBtnOpen = new sharpRPA.UI.CustomControls.UIPictureButton();
-            this.ExitBtn = new sharpRPA.UI.CustomControls.UIPictureButton();
+            this.lstContextStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.enableSelectedCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableSelectedCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseBeforeExecutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copySelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.tlpControls.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
-            this.pnlControlContainer.SuspendLayout();
-            this.lstContextStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.pnlCommandHelper.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            this.pnlControlContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
             this.uiGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnRunScript)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnScheduleManagement)).BeginInit();
             this.uiGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiBtnCommandExplorer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnAddCommand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnAddVariable)).BeginInit();
             this.uiGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiBtnSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnOpen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).BeginInit();
+            this.lstContextStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpControls
@@ -112,155 +109,6 @@
             this.tlpControls.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tlpControls.Size = new System.Drawing.Size(1372, 777);
             this.tlpControls.TabIndex = 2;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.White;
-            this.tlpControls.SetColumnSpan(this.pnlHeader, 3);
-            this.pnlHeader.Controls.Add(this.lblCoordinatorInfo);
-            this.pnlHeader.Controls.Add(this.lblMainLogo);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1372, 60);
-            this.pnlHeader.TabIndex = 2;
-            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // lblCoordinatorInfo
-            // 
-            this.lblCoordinatorInfo.AutoSize = true;
-            this.lblCoordinatorInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCoordinatorInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoordinatorInfo.ForeColor = System.Drawing.Color.White;
-            this.lblCoordinatorInfo.Location = new System.Drawing.Point(304, 20);
-            this.lblCoordinatorInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCoordinatorInfo.Name = "lblCoordinatorInfo";
-            this.lblCoordinatorInfo.Size = new System.Drawing.Size(0, 25);
-            this.lblCoordinatorInfo.TabIndex = 3;
-            this.lblCoordinatorInfo.Visible = false;
-            // 
-            // lblMainLogo
-            // 
-            this.lblMainLogo.AutoSize = true;
-            this.lblMainLogo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainLogo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblMainLogo.Location = new System.Drawing.Point(6, 2);
-            this.lblMainLogo.Margin = new System.Windows.Forms.Padding(0);
-            this.lblMainLogo.Name = "lblMainLogo";
-            this.lblMainLogo.Size = new System.Drawing.Size(163, 54);
-            this.lblMainLogo.TabIndex = 0;
-            this.lblMainLogo.Text = "CatRPA";
-            // 
-            // pnlStatus
-            // 
-            this.pnlStatus.BackColor = System.Drawing.Color.SteelBlue;
-            this.tlpControls.SetColumnSpan(this.pnlStatus, 3);
-            this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlStatus.Location = new System.Drawing.Point(0, 738);
-            this.pnlStatus.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlStatus.Name = "pnlStatus";
-            this.pnlStatus.Size = new System.Drawing.Size(1372, 39);
-            this.pnlStatus.TabIndex = 3;
-            this.pnlStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStatus_Paint);
-            // 
-            // pnlControlContainer
-            // 
-            this.pnlControlContainer.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tlpControls.SetColumnSpan(this.pnlControlContainer, 3);
-            this.pnlControlContainer.Controls.Add(this.ExitBtn);
-            this.pnlControlContainer.Controls.Add(this.label7);
-            this.pnlControlContainer.Controls.Add(this.label6);
-            this.pnlControlContainer.Controls.Add(this.label5);
-            this.pnlControlContainer.Controls.Add(this.uiGroupBox3);
-            this.pnlControlContainer.Controls.Add(this.uiGroupBox1);
-            this.pnlControlContainer.Controls.Add(this.uiGroupBox2);
-            this.pnlControlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlControlContainer.Location = new System.Drawing.Point(0, 60);
-            this.pnlControlContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlControlContainer.Name = "pnlControlContainer";
-            this.pnlControlContainer.Size = new System.Drawing.Size(1372, 101);
-            this.pnlControlContainer.TabIndex = 7;
-            this.pnlControlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlControlContainer_Paint);
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Gainsboro;
-            this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(680, 6);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(3, 86);
-            this.label7.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Gainsboro;
-            this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(289, 6);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(3, 86);
-            this.label6.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Gainsboro;
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(520, 6);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(3, 86);
-            this.label5.TabIndex = 19;
-            // 
-            // lstContextStrip
-            // 
-            this.lstContextStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstContextStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.lstContextStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enableSelectedCodeToolStripMenuItem,
-            this.disableSelectedCodeToolStripMenuItem,
-            this.pauseBeforeExecutionToolStripMenuItem,
-            this.copySelectedToolStripMenuItem,
-            this.pasteSelectedToolStripMenuItem});
-            this.lstContextStrip.Name = "lstContextStrip";
-            this.lstContextStrip.Size = new System.Drawing.Size(294, 154);
-            // 
-            // enableSelectedCodeToolStripMenuItem
-            // 
-            this.enableSelectedCodeToolStripMenuItem.Name = "enableSelectedCodeToolStripMenuItem";
-            this.enableSelectedCodeToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
-            this.enableSelectedCodeToolStripMenuItem.Text = "Enable Selected Code";
-            this.enableSelectedCodeToolStripMenuItem.Click += new System.EventHandler(this.enableSelectedCodeToolStripMenuItem_Click);
-            // 
-            // disableSelectedCodeToolStripMenuItem
-            // 
-            this.disableSelectedCodeToolStripMenuItem.Name = "disableSelectedCodeToolStripMenuItem";
-            this.disableSelectedCodeToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
-            this.disableSelectedCodeToolStripMenuItem.Text = "Disable Selected Code";
-            this.disableSelectedCodeToolStripMenuItem.Click += new System.EventHandler(this.disableSelectedCodeToolStripMenuItem_Click);
-            // 
-            // pauseBeforeExecutionToolStripMenuItem
-            // 
-            this.pauseBeforeExecutionToolStripMenuItem.Name = "pauseBeforeExecutionToolStripMenuItem";
-            this.pauseBeforeExecutionToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
-            this.pauseBeforeExecutionToolStripMenuItem.Text = "Pause Before Execution";
-            this.pauseBeforeExecutionToolStripMenuItem.Click += new System.EventHandler(this.pauseBeforeExecutionToolStripMenuItem_Click);
-            // 
-            // copySelectedToolStripMenuItem
-            // 
-            this.copySelectedToolStripMenuItem.Name = "copySelectedToolStripMenuItem";
-            this.copySelectedToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
-            this.copySelectedToolStripMenuItem.Text = "Copy Selected Action";
-            this.copySelectedToolStripMenuItem.Click += new System.EventHandler(this.copySelectedToolStripMenuItem_Click);
-            // 
-            // pasteSelectedToolStripMenuItem
-            // 
-            this.pasteSelectedToolStripMenuItem.Name = "pasteSelectedToolStripMenuItem";
-            this.pasteSelectedToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
-            this.pasteSelectedToolStripMenuItem.Text = "Paste Selected Action";
-            this.pasteSelectedToolStripMenuItem.Click += new System.EventHandler(this.pasteSelectedToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -363,19 +211,135 @@
             this.commandColumn.Text = "Script Commands";
             this.commandColumn.Width = 771;
             // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.White;
+            this.tlpControls.SetColumnSpan(this.pnlHeader, 3);
+            this.pnlHeader.Controls.Add(this.lblCoordinatorInfo);
+            this.pnlHeader.Controls.Add(this.lblMainLogo);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1372, 60);
+            this.pnlHeader.TabIndex = 2;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblCoordinatorInfo
+            // 
+            this.lblCoordinatorInfo.AutoSize = true;
+            this.lblCoordinatorInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCoordinatorInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoordinatorInfo.ForeColor = System.Drawing.Color.White;
+            this.lblCoordinatorInfo.Location = new System.Drawing.Point(304, 20);
+            this.lblCoordinatorInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCoordinatorInfo.Name = "lblCoordinatorInfo";
+            this.lblCoordinatorInfo.Size = new System.Drawing.Size(0, 25);
+            this.lblCoordinatorInfo.TabIndex = 3;
+            this.lblCoordinatorInfo.Visible = false;
+            // 
+            // lblMainLogo
+            // 
+            this.lblMainLogo.AutoSize = true;
+            this.lblMainLogo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainLogo.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblMainLogo.Location = new System.Drawing.Point(6, 2);
+            this.lblMainLogo.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMainLogo.Name = "lblMainLogo";
+            this.lblMainLogo.Size = new System.Drawing.Size(163, 54);
+            this.lblMainLogo.TabIndex = 0;
+            this.lblMainLogo.Text = "CatRPA";
+            // 
+            // pnlStatus
+            // 
+            this.pnlStatus.BackColor = System.Drawing.Color.SteelBlue;
+            this.tlpControls.SetColumnSpan(this.pnlStatus, 3);
+            this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlStatus.Location = new System.Drawing.Point(0, 738);
+            this.pnlStatus.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlStatus.Name = "pnlStatus";
+            this.pnlStatus.Size = new System.Drawing.Size(1372, 39);
+            this.pnlStatus.TabIndex = 3;
+            this.pnlStatus.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlStatus_Paint);
+            // 
+            // pnlControlContainer
+            // 
+            this.pnlControlContainer.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tlpControls.SetColumnSpan(this.pnlControlContainer, 3);
+            this.pnlControlContainer.Controls.Add(this.label1);
+            this.pnlControlContainer.Controls.Add(this.ExitBtn);
+            this.pnlControlContainer.Controls.Add(this.label7);
+            this.pnlControlContainer.Controls.Add(this.uiGroupBox3);
+            this.pnlControlContainer.Controls.Add(this.uiGroupBox2);
+            this.pnlControlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlControlContainer.Location = new System.Drawing.Point(0, 60);
+            this.pnlControlContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlControlContainer.Name = "pnlControlContainer";
+            this.pnlControlContainer.Size = new System.Drawing.Size(1372, 101);
+            this.pnlControlContainer.TabIndex = 7;
+            this.pnlControlContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlControlContainer_Paint);
+            // 
+            // ExitBtn
+            // 
+            this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ExitBtn.DisplayText = "Exit";
+            this.ExitBtn.DisplayTextBrush = System.Drawing.Color.Black;
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.ExitBtn.Image = global::sharpRPA.Properties.Resources.stop;
+            this.ExitBtn.IsMouseOver = false;
+            this.ExitBtn.Location = new System.Drawing.Point(558, 28);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(64, 64);
+            this.ExitBtn.TabIndex = 14;
+            this.ExitBtn.TabStop = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Gainsboro;
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(547, 6);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(3, 86);
+            this.label7.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Gainsboro;
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(216, 3);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(3, 86);
+            this.label6.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Gainsboro;
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(452, 3);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(3, 86);
+            this.label5.TabIndex = 19;
+            // 
             // uiGroupBox3
             // 
             this.uiGroupBox3.BackColor = System.Drawing.Color.Transparent;
             this.uiGroupBox3.Controls.Add(this.uiBtnRunScript);
             this.uiGroupBox3.Controls.Add(this.uiBtnScheduleManagement);
-            this.uiGroupBox3.Location = new System.Drawing.Point(525, 4);
+            this.uiGroupBox3.Location = new System.Drawing.Point(392, 3);
             this.uiGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.uiGroupBox3.Name = "uiGroupBox3";
             this.uiGroupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.uiGroupBox3.Size = new System.Drawing.Size(153, 94);
             this.uiGroupBox3.TabIndex = 18;
             this.uiGroupBox3.TabStop = false;
-            this.uiGroupBox3.Text = "Execute";
+            this.uiGroupBox3.Text = "Выполнить";
             this.uiGroupBox3.TitleBackColor = System.Drawing.Color.Transparent;
             this.uiGroupBox3.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox3.TitleForeColor = System.Drawing.Color.SteelBlue;
@@ -418,38 +382,20 @@
             // uiGroupBox1
             // 
             this.uiGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.uiGroupBox1.Controls.Add(this.uiBtnCommandExplorer);
             this.uiGroupBox1.Controls.Add(this.uiBtnAddCommand);
             this.uiGroupBox1.Controls.Add(this.uiBtnAddVariable);
-            this.uiGroupBox1.Location = new System.Drawing.Point(295, 4);
+            this.uiGroupBox1.Location = new System.Drawing.Point(227, 0);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.uiGroupBox1.Size = new System.Drawing.Size(224, 94);
+            this.uiGroupBox1.Size = new System.Drawing.Size(153, 94);
             this.uiGroupBox1.TabIndex = 17;
             this.uiGroupBox1.TabStop = false;
-            this.uiGroupBox1.Text = "Commands and Variables";
+            this.uiGroupBox1.Text = "Команды";
             this.uiGroupBox1.TitleBackColor = System.Drawing.Color.Transparent;
             this.uiGroupBox1.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox1.TitleForeColor = System.Drawing.Color.SteelBlue;
             this.uiGroupBox1.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
-            // 
-            // uiBtnCommandExplorer
-            // 
-            this.uiBtnCommandExplorer.BackColor = System.Drawing.Color.Transparent;
-            this.uiBtnCommandExplorer.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.uiBtnCommandExplorer.DisplayText = "Explore";
-            this.uiBtnCommandExplorer.DisplayTextBrush = System.Drawing.Color.Black;
-            this.uiBtnCommandExplorer.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.uiBtnCommandExplorer.Image = ((System.Drawing.Image)(resources.GetObject("uiBtnCommandExplorer.Image")));
-            this.uiBtnCommandExplorer.IsMouseOver = false;
-            this.uiBtnCommandExplorer.Location = new System.Drawing.Point(148, 25);
-            this.uiBtnCommandExplorer.Margin = new System.Windows.Forms.Padding(4);
-            this.uiBtnCommandExplorer.Name = "uiBtnCommandExplorer";
-            this.uiBtnCommandExplorer.Size = new System.Drawing.Size(69, 64);
-            this.uiBtnCommandExplorer.TabIndex = 14;
-            this.uiBtnCommandExplorer.TabStop = false;
-            this.uiBtnCommandExplorer.Click += new System.EventHandler(this.uiBtnCommandExplorer_Click);
             // 
             // uiBtnAddCommand
             // 
@@ -488,39 +434,24 @@
             // uiGroupBox2
             // 
             this.uiGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.uiGroupBox2.Controls.Add(this.uiBtnSettings);
             this.uiGroupBox2.Controls.Add(this.uiBtnSave);
             this.uiGroupBox2.Controls.Add(this.uiBtnNew);
+            this.uiGroupBox2.Controls.Add(this.label5);
+            this.uiGroupBox2.Controls.Add(this.label6);
             this.uiGroupBox2.Controls.Add(this.uiBtnOpen);
+            this.uiGroupBox2.Controls.Add(this.uiGroupBox1);
             this.uiGroupBox2.Location = new System.Drawing.Point(4, 4);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.uiGroupBox2.Size = new System.Drawing.Size(284, 94);
+            this.uiGroupBox2.Size = new System.Drawing.Size(380, 94);
             this.uiGroupBox2.TabIndex = 16;
             this.uiGroupBox2.TabStop = false;
-            this.uiGroupBox2.Text = "File Actions and Settings";
+            this.uiGroupBox2.Text = "Файлы";
             this.uiGroupBox2.TitleBackColor = System.Drawing.Color.Transparent;
             this.uiGroupBox2.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox2.TitleForeColor = System.Drawing.Color.SteelBlue;
             this.uiGroupBox2.TitleHatchStyle = System.Drawing.Drawing2D.HatchStyle.Horizontal;
-            // 
-            // uiBtnSettings
-            // 
-            this.uiBtnSettings.BackColor = System.Drawing.Color.Transparent;
-            this.uiBtnSettings.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.uiBtnSettings.DisplayText = "Settings";
-            this.uiBtnSettings.DisplayTextBrush = System.Drawing.Color.Black;
-            this.uiBtnSettings.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.uiBtnSettings.Image = ((System.Drawing.Image)(resources.GetObject("uiBtnSettings.Image")));
-            this.uiBtnSettings.IsMouseOver = false;
-            this.uiBtnSettings.Location = new System.Drawing.Point(213, 25);
-            this.uiBtnSettings.Margin = new System.Windows.Forms.Padding(4);
-            this.uiBtnSettings.Name = "uiBtnSettings";
-            this.uiBtnSettings.Size = new System.Drawing.Size(64, 64);
-            this.uiBtnSettings.TabIndex = 12;
-            this.uiBtnSettings.TabStop = false;
-            this.uiBtnSettings.Click += new System.EventHandler(this.uiBtnSettings_Click);
             // 
             // uiBtnSave
             // 
@@ -573,22 +504,63 @@
             this.uiBtnOpen.TabStop = false;
             this.uiBtnOpen.Click += new System.EventHandler(this.uiBtnOpen_Click);
             // 
-            // ExitBtn
+            // lstContextStrip
             // 
-            this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.ExitBtn.DisplayText = "Exit";
-            this.ExitBtn.DisplayTextBrush = System.Drawing.Color.Black;
-            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.ExitBtn.Image = global::sharpRPA.Properties.Resources.stop;
-            this.ExitBtn.IsMouseOver = false;
-            this.ExitBtn.Location = new System.Drawing.Point(691, 28);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(64, 64);
-            this.ExitBtn.TabIndex = 14;
-            this.ExitBtn.TabStop = false;
-            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            this.lstContextStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstContextStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.lstContextStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enableSelectedCodeToolStripMenuItem,
+            this.disableSelectedCodeToolStripMenuItem,
+            this.pauseBeforeExecutionToolStripMenuItem,
+            this.copySelectedToolStripMenuItem,
+            this.pasteSelectedToolStripMenuItem});
+            this.lstContextStrip.Name = "lstContextStrip";
+            this.lstContextStrip.Size = new System.Drawing.Size(294, 154);
+            // 
+            // enableSelectedCodeToolStripMenuItem
+            // 
+            this.enableSelectedCodeToolStripMenuItem.Name = "enableSelectedCodeToolStripMenuItem";
+            this.enableSelectedCodeToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
+            this.enableSelectedCodeToolStripMenuItem.Text = "Enable Selected Code";
+            this.enableSelectedCodeToolStripMenuItem.Click += new System.EventHandler(this.enableSelectedCodeToolStripMenuItem_Click);
+            // 
+            // disableSelectedCodeToolStripMenuItem
+            // 
+            this.disableSelectedCodeToolStripMenuItem.Name = "disableSelectedCodeToolStripMenuItem";
+            this.disableSelectedCodeToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
+            this.disableSelectedCodeToolStripMenuItem.Text = "Disable Selected Code";
+            this.disableSelectedCodeToolStripMenuItem.Click += new System.EventHandler(this.disableSelectedCodeToolStripMenuItem_Click);
+            // 
+            // pauseBeforeExecutionToolStripMenuItem
+            // 
+            this.pauseBeforeExecutionToolStripMenuItem.Name = "pauseBeforeExecutionToolStripMenuItem";
+            this.pauseBeforeExecutionToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
+            this.pauseBeforeExecutionToolStripMenuItem.Text = "Pause Before Execution";
+            this.pauseBeforeExecutionToolStripMenuItem.Click += new System.EventHandler(this.pauseBeforeExecutionToolStripMenuItem_Click);
+            // 
+            // copySelectedToolStripMenuItem
+            // 
+            this.copySelectedToolStripMenuItem.Name = "copySelectedToolStripMenuItem";
+            this.copySelectedToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
+            this.copySelectedToolStripMenuItem.Text = "Copy Selected Action";
+            this.copySelectedToolStripMenuItem.Click += new System.EventHandler(this.copySelectedToolStripMenuItem_Click);
+            // 
+            // pasteSelectedToolStripMenuItem
+            // 
+            this.pasteSelectedToolStripMenuItem.Name = "pasteSelectedToolStripMenuItem";
+            this.pasteSelectedToolStripMenuItem.Size = new System.Drawing.Size(293, 30);
+            this.pasteSelectedToolStripMenuItem.Text = "Paste Selected Action";
+            this.pasteSelectedToolStripMenuItem.Click += new System.EventHandler(this.pasteSelectedToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(381, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(3, 86);
+            this.label1.TabIndex = 21;
             // 
             // frmScriptBuilder
             // 
@@ -604,29 +576,27 @@
             this.Shown += new System.EventHandler(this.frmScriptBuilder_Shown);
             this.SizeChanged += new System.EventHandler(this.frmScriptBuilder_SizeChanged);
             this.tlpControls.ResumeLayout(false);
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
-            this.pnlControlContainer.ResumeLayout(false);
-            this.lstContextStrip.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.pnlCommandHelper.ResumeLayout(false);
             this.pnlCommandHelper.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.pnlControlContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
             this.uiGroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnRunScript)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnScheduleManagement)).EndInit();
             this.uiGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiBtnCommandExplorer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnAddCommand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnAddVariable)).EndInit();
             this.uiGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiBtnSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnOpen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitBtn)).EndInit();
+            this.lstContextStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -647,10 +617,8 @@
         private sharpRPA.UI.CustomControls.UIPictureButton uiBtnOpen;
         private sharpRPA.UI.CustomControls.UIPictureButton uiBtnNew;
         private sharpRPA.UI.CustomControls.UIPictureButton uiBtnScheduleManagement;
-        private sharpRPA.UI.CustomControls.UIPictureButton uiBtnCommandExplorer;
         private System.Windows.Forms.ToolStripMenuItem pauseBeforeExecutionToolStripMenuItem;
         private System.Windows.Forms.Label lblCoordinatorInfo;
-        private CustomControls.UIPictureButton uiBtnSettings;
         private CustomControls.UIGroupBox uiGroupBox2;
         private CustomControls.UIGroupBox uiGroupBox1;
         private CustomControls.UIGroupBox uiGroupBox3;
@@ -667,6 +635,7 @@
         private CustomControls.UIListView lstScriptActions;
         private System.Windows.Forms.ColumnHeader commandColumn;
         private CustomControls.UIPictureButton ExitBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
