@@ -1034,7 +1034,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Variable Commands")]
+    [Attributes.ClassAttributes.Group("Задать переменную")]
     [Attributes.ClassAttributes.Description("This command allows you to modify variables.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements actions against VariableList from the scripting engine.")]
     public class VariableCommand : ScriptCommand
@@ -1048,8 +1048,8 @@ namespace sharpRPA.Core.AutomationCommands
         public string v_Input { get; set; }
         public VariableCommand()
         {
-            this.CommandName = "VariableCommand";
-            this.SelectionName = "Set Variable";
+            this.CommandName = "Задать переменную";
+            this.SelectionName = "Установить переменную";
             this.CommandEnabled = true;
         }
 
