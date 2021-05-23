@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj": {}
+    "C:\\Users\\sofiy\\OneDrive\\Документы\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj": {
+    "C:\\Users\\sofiy\\OneDrive\\Документы\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj",
+        "projectUniqueName": "C:\\Users\\sofiy\\OneDrive\\Документы\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj",
         "projectName": "OCatRPA",
-        "projectPath": "D:\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj",
-        "packagesPath": "C:\\Users\\milky\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\obj\\",
+        "projectPath": "C:\\Users\\sofiy\\OneDrive\\Документы\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj",
+        "packagesPath": "C:\\Users\\sofiy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sofiy\\OneDrive\\Документы\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\milky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sofiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

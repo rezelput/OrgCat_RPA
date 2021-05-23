@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "6agzXCMVhCTwfe4DrYIYsGA9XNBbZFLJcw+UVw+XpUZ1rMgaM49T5CTJcIlz3xpQ6n8ICCfj3kbZJOQ1Y0leEQ==",
+  "dgSpecHash": "bLeSnc7wLFmkPcrx75LRVo+UaEst0Yr7OQAC6ndy869ToXBLL9WVaORgO2YNvRrEE9PmJfs60Rx6OlYa6NGoPA==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj",
+  "projectFilePath": "C:\\Users\\sofiy\\OneDrive\\Документы\\GitHub\\OrgCat_RPA\\OCatRPA\\OCatRPA\\OCatRPA.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\milky\\.nuget\\packages\\microsoft.visualstudio.shell.15.0\\16.9.31025.104\\microsoft.visualstudio.shell.15.0.16.9.31025.104.nupkg.sha512"
+    "C:\\Users\\sofiy\\.nuget\\packages\\microsoft.visualstudio.shell.15.0\\16.9.31025.104\\microsoft.visualstudio.shell.15.0.16.9.31025.104.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Пакет \"Microsoft.VisualStudio.Shell.15.0 16.9.31025.104\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net5.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "message": "Package 'Microsoft.VisualStudio.Shell.15.0 16.9.31025.104' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.VisualStudio.Shell.15.0",
       "targetGraphs": [
         "net5.0-windows7.0"
