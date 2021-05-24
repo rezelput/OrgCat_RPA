@@ -21,25 +21,25 @@ namespace sharpRPA.Core.AutomationCommands
     [XmlInclude(typeof(SendKeysCommand))]
     [XmlInclude(typeof(SendMouseMoveCommand))]
     [XmlInclude(typeof(PauseCommand))]
-    [XmlInclude(typeof(ActivateWindowCommand))]
-    [XmlInclude(typeof(MoveWindowCommand))]
+   // [XmlInclude(typeof(ActivateWindowCommand))]
+   // [XmlInclude(typeof(MoveWindowCommand))]
     [XmlInclude(typeof(CommentCommand))]
     [XmlInclude(typeof(ThickAppClickItemCommand))]
     [XmlInclude(typeof(ThickAppGetTextCommand))]
-    [XmlInclude(typeof(ResizeWindowCommand))]
-    [XmlInclude(typeof(WaitForWindowCommand))]
+   // [XmlInclude(typeof(ResizeWindowCommand))]
+   // [XmlInclude(typeof(WaitForWindowCommand))]
     [XmlInclude(typeof(MessageBoxCommand))]
     [XmlInclude(typeof(StopProcessCommand))]
     [XmlInclude(typeof(StartProcessCommand))]
     [XmlInclude(typeof(VariableCommand))]
     [XmlInclude(typeof(RunScriptCommand))]
-    [XmlInclude(typeof(CloseWindowCommand))]
+   // [XmlInclude(typeof(CloseWindowCommand))]
     [XmlInclude(typeof(IEBrowserCreateCommand))]
     [XmlInclude(typeof(IEBrowserNavigateCommand))]
     [XmlInclude(typeof(IEBrowserCloseCommand))]
     [XmlInclude(typeof(IEBrowserElementCommand))]
     [XmlInclude(typeof(IEBrowserFindBrowserCommand))]
-    [XmlInclude(typeof(SetWindowStateCommand))]
+   // [XmlInclude(typeof(SetWindowStateCommand))]
     [XmlInclude(typeof(BeginLoopCommand))]
     [XmlInclude(typeof(EndLoopCommand))]
     [XmlInclude(typeof(ClipboardGetTextCommand))]
@@ -60,8 +60,8 @@ namespace sharpRPA.Core.AutomationCommands
     [XmlInclude(typeof(EndIfCommand))]
     [XmlInclude(typeof(ElseCommand))]
     [XmlInclude(typeof(OCRCommand))]
-    [XmlInclude(typeof(HTTPRequestCommand))]
-    [XmlInclude(typeof(HTTPQueryResultCommand))]
+   // [XmlInclude(typeof(HTTPRequestCommand))]
+   // [XmlInclude(typeof(HTTPQueryResultCommand))]
     [Serializable]
     public abstract class ScriptCommand
     {
@@ -657,7 +657,7 @@ namespace sharpRPA.Core.AutomationCommands
             return base.GetDisplayValue() + " [Message: " + v_Message + "]";
         }
     }
-    [Serializable]
+  /*  [Serializable]
     [Attributes.ClassAttributes.Group("Window Commands")]
     [Attributes.ClassAttributes.Description("This command activates a window and brings it to the front.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'FindWindowNative', 'SetForegroundWindow', 'ShowWindow' from user32.dll to achieve automation.")]
@@ -921,7 +921,7 @@ namespace sharpRPA.Core.AutomationCommands
             return base.GetDisplayValue() + " [Target Window: '" + v_WindowName + "', Wait Up To " + v_LengthToWait + " seconds]";
         }
 
-    }
+    }*/
 
     [Serializable]
     [Attributes.ClassAttributes.Group("Programs/Process Commands")]
@@ -1103,7 +1103,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Misc Commands")]
+    [Attributes.ClassAttributes.Group("Другое")]
     [Attributes.ClassAttributes.Description("This command allows you to send email using SMTP.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements the System.Net Namespace to achieve automation")]
     public class SMTPSendEmailCommand : ScriptCommand
@@ -1197,7 +1197,7 @@ namespace sharpRPA.Core.AutomationCommands
             this.CommandEnabled = true;
         }
 
-        public override void RunCommand(object sender)
+      /*  public override void RunCommand(object sender)
         {
             if (v_WindowName != "Current Window")
             {
@@ -1210,7 +1210,7 @@ namespace sharpRPA.Core.AutomationCommands
             System.Windows.Forms.SendKeys.SendWait(v_TextToSend);
 
             System.Threading.Thread.Sleep(500);
-        }
+        }*/
 
         public override string GetDisplayValue()
         {
@@ -1298,9 +1298,9 @@ namespace sharpRPA.Core.AutomationCommands
 
             var requiredItem = searchItem.FindFirst(TreeScope.Descendants, new PropertyCondition(AutomationElement.NameProperty, v_AutomationHandleName));
 
-            var newActivateWindow = new ActivateWindowCommand();
+           /* var newActivateWindow = new ActivateWindowCommand();
             newActivateWindow.v_WindowName = v_AutomationWindowName;
-            newActivateWindow.RunCommand(sender);
+            newActivateWindow.RunCommand(sender);*/
 
             //get newpoint for now
             var newPoint = requiredItem.GetClickablePoint();
@@ -2146,7 +2146,7 @@ namespace sharpRPA.Core.AutomationCommands
 
     #endregion OCR and Image Commands
 
-    #region HTTP Commands
+   /* #region HTTP Commands
     [Serializable]
     [Attributes.ClassAttributes.Group("WebAPI Commands")]
     [Attributes.ClassAttributes.Description("This command downloads the HTML source of a web page for parsing")]
@@ -2234,7 +2234,7 @@ namespace sharpRPA.Core.AutomationCommands
             }
         }
 
-        #endregion
+        #endregion*/
     }
 
 

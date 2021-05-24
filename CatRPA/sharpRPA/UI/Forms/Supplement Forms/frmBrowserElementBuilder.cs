@@ -111,7 +111,7 @@ namespace sharpRPA.UI.Forms.Supplemental
                             return false;
                         };
 
-                        var activateWindow = new Core.AutomationCommands.ActivateWindowCommand();
+                       /* var activateWindow = new Core.AutomationCommands.ActivateWindowCommand();
                         activateWindow.v_WindowName = cboIEWindow.Text + " - Internet Explorer";
                         activateWindow.RunCommand(null);
 
@@ -120,7 +120,7 @@ namespace sharpRPA.UI.Forms.Supplemental
                         moveWindow.v_XWindowPosition = 0;
                         moveWindow.v_YWindowPosition = 0;
                         moveWindow.RunCommand(null);
-
+                       */
                         MoveFormToBottomRight(this);
                         this.TopMost = true;
 
