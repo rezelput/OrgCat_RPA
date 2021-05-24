@@ -177,7 +177,7 @@ namespace sharpRPA.UI.Forms
             if (recentFiles.Count() == 0)
             {
                 Label noFilesLabel = new Label();
-                noFilesLabel.Text = "No Recent Files Found";
+                noFilesLabel.Text = "Последние просмотренные файлы не найдены";
                 noFilesLabel.AutoSize = true;
                 noFilesLabel.ForeColor = Color.SteelBlue;
                // noFilesLabel.Font = lnkGitIssue.Font;

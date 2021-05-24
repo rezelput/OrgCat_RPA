@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScheduleManagement));
             this.txtAppPath = new System.Windows.Forms.TextBox();
             this.cboSelectedScript = new System.Windows.Forms.ComboBox();
@@ -50,7 +50,6 @@
             this.bgwGetSchedulingInfo = new System.ComponentModel.BackgroundWorker();
             this.tmrGetSchedulingInfo = new System.Windows.Forms.Timer(this.components);
             this.uiBtnShowScheduleManager = new sharpRPA.UI.CustomControls.UIPictureButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.uiBtnOk = new sharpRPA.UI.CustomControls.UIPictureButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboRecurType = new System.Windows.Forms.ComboBox();
@@ -63,7 +62,6 @@
             this.dtStartTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduledTasks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnShowScheduleManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnOk)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +70,7 @@
             // 
             this.txtAppPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppPath.Location = new System.Drawing.Point(5, 314);
-            this.txtAppPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAppPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtAppPath.Name = "txtAppPath";
             this.txtAppPath.Size = new System.Drawing.Size(683, 29);
             this.txtAppPath.TabIndex = 0;
@@ -83,7 +81,7 @@
             this.cboSelectedScript.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSelectedScript.FormattingEnabled = true;
             this.cboSelectedScript.Location = new System.Drawing.Point(5, 367);
-            this.cboSelectedScript.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSelectedScript.Margin = new System.Windows.Forms.Padding(4);
             this.cboSelectedScript.Name = "cboSelectedScript";
             this.cboSelectedScript.Size = new System.Drawing.Size(444, 32);
             this.cboSelectedScript.TabIndex = 2;
@@ -94,7 +92,7 @@
             this.lblMainLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblMainLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainLogo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblMainLogo.Location = new System.Drawing.Point(65, 9);
+            this.lblMainLogo.Location = new System.Drawing.Point(13, 9);
             this.lblMainLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMainLogo.Name = "lblMainLogo";
             this.lblMainLogo.Size = new System.Drawing.Size(463, 46);
@@ -158,14 +156,14 @@
             this.dgvScheduledTasks.AllowUserToAddRows = false;
             this.dgvScheduledTasks.AllowUserToDeleteRows = false;
             this.dgvScheduledTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvScheduledTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvScheduledTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvScheduledTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvScheduledTasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTaskName,
@@ -174,25 +172,25 @@
             this.colTaskNextRunTime,
             this.colTaskState,
             this.colChangeTaskStatus});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvScheduledTasks.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvScheduledTasks.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvScheduledTasks.Location = new System.Drawing.Point(5, 103);
-            this.dgvScheduledTasks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvScheduledTasks.Margin = new System.Windows.Forms.Padding(4);
             this.dgvScheduledTasks.Name = "dgvScheduledTasks";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvScheduledTasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvScheduledTasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvScheduledTasks.RowHeadersWidth = 51;
             this.dgvScheduledTasks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvScheduledTasks.Size = new System.Drawing.Size(816, 153);
@@ -268,24 +266,12 @@
             this.uiBtnShowScheduleManager.Image = ((System.Drawing.Image)(resources.GetObject("uiBtnShowScheduleManager.Image")));
             this.uiBtnShowScheduleManager.IsMouseOver = false;
             this.uiBtnShowScheduleManager.Location = new System.Drawing.Point(699, 37);
-            this.uiBtnShowScheduleManager.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiBtnShowScheduleManager.Margin = new System.Windows.Forms.Padding(4);
             this.uiBtnShowScheduleManager.Name = "uiBtnShowScheduleManager";
             this.uiBtnShowScheduleManager.Size = new System.Drawing.Size(123, 59);
             this.uiBtnShowScheduleManager.TabIndex = 14;
             this.uiBtnShowScheduleManager.TabStop = false;
             this.uiBtnShowScheduleManager.Click += new System.EventHandler(this.uiBtnShowScheduleManager_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::sharpRPA.Properties.Resources.RPALogo;
-            this.pictureBox2.Location = new System.Drawing.Point(5, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 55);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // uiBtnOk
             // 
@@ -297,7 +283,7 @@
             this.uiBtnOk.Image = ((System.Drawing.Image)(resources.GetObject("uiBtnOk.Image")));
             this.uiBtnOk.IsMouseOver = false;
             this.uiBtnOk.Location = new System.Drawing.Point(239, 69);
-            this.uiBtnOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiBtnOk.Margin = new System.Windows.Forms.Padding(4);
             this.uiBtnOk.Name = "uiBtnOk";
             this.uiBtnOk.Size = new System.Drawing.Size(73, 59);
             this.uiBtnOk.TabIndex = 1;
@@ -317,7 +303,7 @@
             this.panel1.Controls.Add(this.dtStartTime);
             this.panel1.Controls.Add(this.uiBtnOk);
             this.panel1.Location = new System.Drawing.Point(5, 415);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(684, 148);
             this.panel1.TabIndex = 15;
@@ -331,7 +317,7 @@
             "Hours",
             "Days"});
             this.cboRecurType.Location = new System.Drawing.Point(287, 28);
-            this.cboRecurType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboRecurType.Margin = new System.Windows.Forms.Padding(4);
             this.cboRecurType.Name = "cboRecurType";
             this.cboRecurType.Size = new System.Drawing.Size(209, 26);
             this.cboRecurType.TabIndex = 7;
@@ -352,7 +338,7 @@
             // 
             this.txtRecurCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecurCount.Location = new System.Drawing.Point(239, 28);
-            this.txtRecurCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRecurCount.Margin = new System.Windows.Forms.Padding(4);
             this.txtRecurCount.Name = "txtRecurCount";
             this.txtRecurCount.Size = new System.Drawing.Size(41, 24);
             this.txtRecurCount.TabIndex = 5;
@@ -375,7 +361,7 @@
             this.rdoDoNotEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDoNotEnd.ForeColor = System.Drawing.Color.White;
             this.rdoDoNotEnd.Location = new System.Drawing.Point(7, 110);
-            this.rdoDoNotEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoDoNotEnd.Margin = new System.Windows.Forms.Padding(4);
             this.rdoDoNotEnd.Name = "rdoDoNotEnd";
             this.rdoDoNotEnd.Size = new System.Drawing.Size(166, 24);
             this.rdoDoNotEnd.TabIndex = 3;
@@ -389,7 +375,7 @@
             this.rdoEndByDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoEndByDate.ForeColor = System.Drawing.Color.White;
             this.rdoEndByDate.Location = new System.Drawing.Point(7, 57);
-            this.rdoEndByDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoEndByDate.Margin = new System.Windows.Forms.Padding(4);
             this.rdoEndByDate.Name = "rdoEndByDate";
             this.rdoEndByDate.Size = new System.Drawing.Size(153, 24);
             this.rdoEndByDate.TabIndex = 2;
@@ -403,7 +389,7 @@
             this.dtEndTime.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             this.dtEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEndTime.Location = new System.Drawing.Point(7, 81);
-            this.dtEndTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtEndTime.Margin = new System.Windows.Forms.Padding(4);
             this.dtEndTime.Name = "dtEndTime";
             this.dtEndTime.Size = new System.Drawing.Size(205, 22);
             this.dtEndTime.TabIndex = 1;
@@ -414,7 +400,7 @@
             this.dtStartTime.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             this.dtStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtStartTime.Location = new System.Drawing.Point(7, 28);
-            this.dtStartTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtStartTime.Margin = new System.Windows.Forms.Padding(4);
             this.dtStartTime.Name = "dtStartTime";
             this.dtStartTime.Size = new System.Drawing.Size(205, 22);
             this.dtStartTime.TabIndex = 0;
@@ -427,7 +413,6 @@
             this.ClientSize = new System.Drawing.Size(837, 613);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.uiBtnShowScheduleManager);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dgvScheduledTasks);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -436,14 +421,12 @@
             this.Controls.Add(this.lblMainLogo);
             this.Controls.Add(this.cboSelectedScript);
             this.Controls.Add(this.txtAppPath);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmScheduleManagement";
             this.Text = "Schedule Management";
             this.Load += new System.EventHandler(this.frmScheduleManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduledTasks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnShowScheduleManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiBtnOk)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -471,7 +454,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn colChangeTaskStatus;
         private System.ComponentModel.BackgroundWorker bgwGetSchedulingInfo;
         private System.Windows.Forms.Timer tmrGetSchedulingInfo;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private sharpRPA.UI.CustomControls.UIPictureButton uiBtnShowScheduleManager;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtStartTime;
