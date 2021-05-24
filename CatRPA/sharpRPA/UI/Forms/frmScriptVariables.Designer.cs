@@ -63,7 +63,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVariables.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvVariables.Location = new System.Drawing.Point(12, 62);
+            this.dgvVariables.Location = new System.Drawing.Point(16, 76);
+            this.dgvVariables.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvVariables.Name = "dgvVariables";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -73,7 +74,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvVariables.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvVariables.Size = new System.Drawing.Size(714, 231);
+            this.dgvVariables.RowHeadersWidth = 51;
+            this.dgvVariables.Size = new System.Drawing.Size(952, 284);
             this.dgvVariables.TabIndex = 0;
             this.dgvVariables.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvVariables_DataError);
             // 
@@ -81,21 +83,23 @@
             // 
             this.lblMainLogo.AutoSize = true;
             this.lblMainLogo.BackColor = System.Drawing.Color.Transparent;
-            this.lblMainLogo.Font = new System.Drawing.Font("Raleway", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMainLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainLogo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblMainLogo.Location = new System.Drawing.Point(62, 14);
+            this.lblMainLogo.Location = new System.Drawing.Point(83, 17);
+            this.lblMainLogo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMainLogo.Name = "lblMainLogo";
-            this.lblMainLogo.Size = new System.Drawing.Size(255, 37);
+            this.lblMainLogo.Size = new System.Drawing.Size(514, 46);
             this.lblMainLogo.TabIndex = 7;
-            this.lblMainLogo.Text = "Script Variables";
+            this.lblMainLogo.Text = "Скриптовые переменные";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::sharpRPA.Properties.Resources.RPALogo;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(64, 59);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -109,9 +113,10 @@
             this.uiBtnCancel.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.uiBtnCancel.Image = ((System.Drawing.Image)(resources.GetObject("uiBtnCancel.Image")));
             this.uiBtnCancel.IsMouseOver = false;
-            this.uiBtnCancel.Location = new System.Drawing.Point(64, 299);
+            this.uiBtnCancel.Location = new System.Drawing.Point(85, 368);
+            this.uiBtnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiBtnCancel.Name = "uiBtnCancel";
-            this.uiBtnCancel.Size = new System.Drawing.Size(48, 48);
+            this.uiBtnCancel.Size = new System.Drawing.Size(64, 59);
             this.uiBtnCancel.TabIndex = 15;
             this.uiBtnCancel.TabStop = false;
             this.uiBtnCancel.Click += new System.EventHandler(this.uiBtnCancel_Click);
@@ -125,9 +130,10 @@
             this.uiBtnOK.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.uiBtnOK.Image = ((System.Drawing.Image)(resources.GetObject("uiBtnOK.Image")));
             this.uiBtnOK.IsMouseOver = false;
-            this.uiBtnOK.Location = new System.Drawing.Point(13, 299);
+            this.uiBtnOK.Location = new System.Drawing.Point(17, 368);
+            this.uiBtnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiBtnOK.Name = "uiBtnOK";
-            this.uiBtnOK.Size = new System.Drawing.Size(48, 48);
+            this.uiBtnOK.Size = new System.Drawing.Size(64, 59);
             this.uiBtnOK.TabIndex = 14;
             this.uiBtnOK.TabStop = false;
             this.uiBtnOK.Click += new System.EventHandler(this.uiBtnOK_Click);
@@ -135,24 +141,25 @@
             // cboVariableView
             // 
             this.cboVariableView.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboVariableView.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboVariableView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboVariableView.FormattingEnabled = true;
             this.cboVariableView.Items.AddRange(new object[] {
             "User Variables",
             "System Variables"});
-            this.cboVariableView.Location = new System.Drawing.Point(319, 20);
+            this.cboVariableView.Location = new System.Drawing.Point(605, 30);
+            this.cboVariableView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboVariableView.Name = "cboVariableView";
-            this.cboVariableView.Size = new System.Drawing.Size(209, 27);
+            this.cboVariableView.Size = new System.Drawing.Size(277, 33);
             this.cboVariableView.TabIndex = 16;
             this.cboVariableView.SelectedIndexChanged += new System.EventHandler(this.cboVariableView_SelectedIndexChanged);
             // 
             // frmScriptVariables
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.BackgroundChangeIndex = 196;
-            this.ClientSize = new System.Drawing.Size(752, 353);
+            this.ClientSize = new System.Drawing.Size(1003, 434);
             this.Controls.Add(this.cboVariableView);
             this.Controls.Add(this.uiBtnCancel);
             this.Controls.Add(this.uiBtnOK);
@@ -161,6 +168,7 @@
             this.Controls.Add(this.dgvVariables);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmScriptVariables";
             this.Text = "Script Variables";
             this.Load += new System.EventHandler(this.frmScriptVariables_Load);
