@@ -113,7 +113,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region Legacy IE Web Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("IE Browser Commands")]
+    [Attributes.ClassAttributes.Group("IE Браузер")]
     [Attributes.ClassAttributes.Description("This command allows you to create a new IE web browser session.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements the 'InternetExplorer' application object from SHDocVw.dll to achieve automation.")]
     public class IEBrowserCreateCommand : ScriptCommand
@@ -144,7 +144,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("IE Browser Commands")]
+    [Attributes.ClassAttributes.Group("IE Браузер")]
     [Attributes.ClassAttributes.Description("This command allows you to find and attach to an existing IE web browser session.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements the 'InternetExplorer' application object from SHDocVw.dll to achieve automation.")]
     public class IEBrowserFindBrowserCommand : ScriptCommand
@@ -205,7 +205,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("IE Browser Commands")]
+    [Attributes.ClassAttributes.Group("IE Браузер")]
     [Attributes.ClassAttributes.Description("This command allows you to navigate the associated IE web browser to a URL.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements the 'InternetExplorer' application object from SHDocVw.dll to achieve automation.")]
     public class IEBrowserNavigateCommand : ScriptCommand
@@ -260,7 +260,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("IE Browser Commands")]
+    [Attributes.ClassAttributes.Group("IE Браузер")]
     [Attributes.ClassAttributes.Description("This command allows you to close the associated IE web browser")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements the 'InternetExplorer' application object from SHDocVw.dll to achieve automation.")]
     public class IEBrowserCloseCommand : ScriptCommand
@@ -299,7 +299,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("IE Browser Commands")]
+    [Attributes.ClassAttributes.Group("IE Браузер")]
     [Attributes.ClassAttributes.Description("This command allows you to manipulate (get or set) elements within the HTML document of the associated IE web browser.  Features an assisting element capture form")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements the 'InternetExplorer' application object from SHDocVw.dll and MSHTML.dll to achieve automation.")]
     public class IEBrowserElementCommand : ScriptCommand
@@ -924,7 +924,7 @@ namespace sharpRPA.Core.AutomationCommands
     }*/
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("Programs/Process Commands")]
+    [Attributes.ClassAttributes.Group("Команды программные/процесса")]
     [Attributes.ClassAttributes.Description("This command allows you to start a program or a process. You can use short names 'chrome.exe' or fully qualified names 'c:/some.exe'")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Process.Start'.")]
     public class StartProcessCommand : ScriptCommand
@@ -942,7 +942,7 @@ namespace sharpRPA.Core.AutomationCommands
         public StartProcessCommand()
         {
             this.CommandName = "StartProcessCommand";
-            this.SelectionName = "Start Process";
+            this.SelectionName = "Запустить процесс";
             this.CommandEnabled = true;
         }
 
@@ -969,7 +969,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Programs/Process Commands")]
+    [Attributes.ClassAttributes.Group("Команды программные/процесса")]
     [Attributes.ClassAttributes.Description("This command allows you to stop a program or a process. You can use the name of the process 'chrome'. Alternatively, you may use the Close Window or Thick App Command instead.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Process.CloseMainWindow'.")]
     public class StopProcessCommand : ScriptCommand
@@ -981,7 +981,7 @@ namespace sharpRPA.Core.AutomationCommands
         public StopProcessCommand()
         {
             this.CommandName = "StopProgramCommand";
-            this.SelectionName = "Stop Process";
+            this.SelectionName = "Остановить процесс";
             this.CommandEnabled = true;
         }
 
@@ -999,7 +999,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Programs/Process Commands")]
+    [Attributes.ClassAttributes.Group("Команды программные/процесса")]
     [Attributes.ClassAttributes.Description("This command allows you to run a script or program and wait for it to exit before proceeding.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Process.Start' and waits for the script/program to exit before proceeding.")]
     public class RunScriptCommand : ScriptCommand
@@ -1011,7 +1011,7 @@ namespace sharpRPA.Core.AutomationCommands
         public RunScriptCommand()
         {
             this.CommandName = "RunScriptCommand";
-            this.SelectionName = "Run Script";
+            this.SelectionName = "Запустить скрипт";
             this.CommandEnabled = true;
         }
 
@@ -1076,7 +1076,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Clipboard Commands")]
+    [Attributes.ClassAttributes.Group("Горячие клавиши")]
     [Attributes.ClassAttributes.Description("This command allows you to get text from the clipboard.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements actions against the VariableList from the scripting engine using System.Windows.Forms.Clipboard.")]
     public class ClipboardGetTextCommand : ScriptCommand
@@ -1400,7 +1400,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region Loop Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("Loop Commands")]
+    [Attributes.ClassAttributes.Group("Циклические операции")]
     [Attributes.ClassAttributes.Description("This command allows you to repeat actions several times (loop).  Any 'Begin Loop' command must have a following 'End Loop' command.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command recursively calls the underlying 'BeginLoop' Command to achieve automation.")]
     public class BeginLoopCommand : ScriptCommand
@@ -1471,7 +1471,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Loop Commands")]
+    [Attributes.ClassAttributes.Group("Циклические операции")]
     [Attributes.ClassAttributes.Description("This command signifies the exit point of looped (repeated) actions.  Required for all loops.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command is used by the serializer to signify the end point of a loop.")]
     public class EndLoopCommand : ScriptCommand
@@ -1495,7 +1495,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region Excel Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to open the Excel Application.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelCreateApplicationCommand : ScriptCommand
@@ -1523,7 +1523,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to open an existing Excel Workbook.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelOpenWorkbookCommand : ScriptCommand
@@ -1557,7 +1557,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to add a new Excel Workbook.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelAddWorkbookCommand : ScriptCommand
@@ -1588,7 +1588,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to move to a specific cell.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelGoToCellCommand : ScriptCommand
@@ -1622,7 +1622,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to set the value of a specific cell.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelSetCellCommand : ScriptCommand
@@ -1664,7 +1664,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command gets text from a specified Excel Cell and assigns it to a variable.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements 'Excel Interop' to achieve automation.")]
     public class ExcelGetCellCommand : ScriptCommand
@@ -1708,7 +1708,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to run a macro in an Excel Workbook.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelRunMacroCommand : ScriptCommand
@@ -1741,7 +1741,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Excel Commands")]
+    [Attributes.ClassAttributes.Group("Excel")]
     [Attributes.ClassAttributes.Description("This command allows you to close Excel.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements Excel Interop to achieve automation.")]
     public class ExcelCloseApplicationCommand : ScriptCommand
@@ -1780,7 +1780,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region String Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("String Commands")]
+    [Attributes.ClassAttributes.Group("Строковые команды")]
     [Attributes.ClassAttributes.Description("This command allows you to trim a string")]
     [Attributes.ClassAttributes.ImplementationDescription("This command uses the String.Substring method to achieve automation.")]
     public class StringSubstringCommand : ScriptCommand
@@ -1826,7 +1826,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("String Commands")]
+    [Attributes.ClassAttributes.Group("Строковые команды")]
     [Attributes.ClassAttributes.Description("This command allows you to split a string")]
     [Attributes.ClassAttributes.ImplementationDescription("This command uses the String.Split method to achieve automation.")]
     public class StringSplitCommand : ScriptCommand
@@ -1878,7 +1878,7 @@ namespace sharpRPA.Core.AutomationCommands
     #region If Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("If Commands")]
+    [Attributes.ClassAttributes.Group("'If'")]
     [Attributes.ClassAttributes.Description("This command allows you to evaluate a logical statement to determine if the statement is true.  Any 'BeginIf' command must have a following 'EndIf' command.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command evaluates supplied arguments and if evaluated to true runs sub elements")]
     public class BeginIfCommand : ScriptCommand
@@ -2024,7 +2024,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("If Commands")]
+    [Attributes.ClassAttributes.Group("'If'")]
     [Attributes.ClassAttributes.Description("This command signifies the exit point of If actions.  Required for all Begin Ifs.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command is used by the serializer to signify the end point of an if.")]
     public class EndIfCommand : ScriptCommand
@@ -2043,7 +2043,7 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("If Commands")]
+    [Attributes.ClassAttributes.Group("'If'")]
     [Attributes.ClassAttributes.Description("TBD")]
     [Attributes.ClassAttributes.ImplementationDescription("TBD")]
     public class ElseCommand : ScriptCommand
@@ -2067,8 +2067,8 @@ namespace sharpRPA.Core.AutomationCommands
     #region OCR and Image Commands
 
     [Serializable]
-    [Attributes.ClassAttributes.Group("Image Commands")]
-    [Attributes.ClassAttributes.Description("This command allows you to covert an image file into text for parsing.")]
+    [Attributes.ClassAttributes.Group("Для изображения")]
+    [Attributes.ClassAttributes.Description("Эта команда позволяет преобразовать файл изображения в текст для анализа.")]
     [Attributes.ClassAttributes.ImplementationDescription("This command has a dependency on and implements OneNote OCR to achieve automation.")]
     public class OCRCommand : ScriptCommand
     {
@@ -2111,8 +2111,8 @@ namespace sharpRPA.Core.AutomationCommands
         }
     }
     [Serializable]
-    [Attributes.ClassAttributes.Group("Image Commands")]
-    [Attributes.ClassAttributes.Description("This command takes a screenshot and saves it to a location")]
+    [Attributes.ClassAttributes.Group("Для изображения")]
+    [Attributes.ClassAttributes.Description("Эта команда делает снимок экрана и сохраняет его в папку")]
     [Attributes.ClassAttributes.ImplementationDescription("This command implements User32 CaptureWindow to achieve automation")]
     public class ScreenshotCommand : ScriptCommand
     {
@@ -2146,95 +2146,7 @@ namespace sharpRPA.Core.AutomationCommands
 
     #endregion OCR and Image Commands
 
-   /* #region HTTP Commands
-    [Serializable]
-    [Attributes.ClassAttributes.Group("WebAPI Commands")]
-    [Attributes.ClassAttributes.Description("This command downloads the HTML source of a web page for parsing")]
-    [Attributes.ClassAttributes.ImplementationDescription("This command implements System.Web to achieve automation")]
-    public class HTTPRequestCommand : ScriptCommand
-    {
-        [XmlAttribute]
-        [Attributes.PropertyAttributes.PropertyDescription("Please Enter the URL")]
-        public string v_WebRequestURL { get; set; }
-
-        [XmlAttribute]
-        [Attributes.PropertyAttributes.PropertyDescription("Apply Result To Variable")]
-        public string v_userVariableName { get; set; }
-
-        public HTTPRequestCommand()
-        {
-            this.CommandName = "HTTPRequestCommand";
-            this.SelectionName = "HTTP Request";
-            this.CommandEnabled = true;
-        }
-
-        public override void RunCommand(object sender)
-        {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(v_WebRequestURL);
-            request.Method = "GET";
-            request.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.121 Safari/535.2";
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-            Stream dataStream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(dataStream);
-            string strResponse = reader.ReadToEnd();
-
-            strResponse.StoreInUserVariable(sender, v_userVariableName);
-
-        }
-
-        public override string GetDisplayValue()
-        {
-            return base.GetDisplayValue() + " [Target URL: '" + v_WebRequestURL + "' and apply result to '" + v_userVariableName + "']";
-        }
-
-    }
-
-        [Serializable]
-        [Attributes.ClassAttributes.Group("WebAPI Commands")]
-        [Attributes.ClassAttributes.Description("This command processes an HTML source object")]
-        [Attributes.ClassAttributes.ImplementationDescription("TBD")]
-        public class HTTPQueryResultCommand : ScriptCommand
-        {
-            [XmlAttribute]
-            [Attributes.PropertyAttributes.PropertyDescription("Select variable containing HTML")]
-            public string v_userVariableName { get; set; }
-
-            [XmlAttribute]
-            [Attributes.PropertyAttributes.PropertyDescription("XPath Query")]
-            public string v_xPathQuery { get; set; }
-
-            [XmlAttribute]
-            [Attributes.PropertyAttributes.PropertyDescription("Apply Query Result To Variable")]
-            public string v_applyToVariableName { get; set; }
-
-            public HTTPQueryResultCommand()
-            {
-                this.CommandName = "HTTPRequestQueryCommand";
-                this.SelectionName = "HTTP Result Query";
-                this.CommandEnabled = true;
-            }
-
-            public override void RunCommand(object sender)
-            {
-            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-            doc.LoadHtml(v_userVariableName.ConvertToUserVariable(sender));
-
-            var div = doc.DocumentNode.SelectSingleNode(v_xPathQuery);
-            string divString = div.InnerText;
-
-            divString.StoreInUserVariable(sender, v_applyToVariableName);
-
-
-        }
-
-            public override string GetDisplayValue()
-            {
-                return base.GetDisplayValue() + " [Query Variable '" + v_userVariableName + "' and apply result to '" + v_applyToVariableName + "']";
-            }
-        }
-
-        #endregion*/
+   
     }
 
 
