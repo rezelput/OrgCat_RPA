@@ -1,12 +1,11 @@
 ﻿using sharpRPA.Commands.Task.Test;
 using System;
 
-namespace Variable
+namespace sharpRPA.Commands.Variable
 {
     internal class SetVariableCommand
     {
-        internal string v_Input;
-
+        public string v_Input { get; internal set; }
         public string v_OutputUserVariableName { get; internal set; }
 
         internal void RunCommand(AutomationEngineInstance engine)
