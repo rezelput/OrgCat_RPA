@@ -37,7 +37,7 @@ namespace sharpRPA.Core.Script
 
             var script = new Core.Script.Script();
 
-            //save variables to file
+            //сохранение в файл
 
             script.Variables = scriptVariables;
 

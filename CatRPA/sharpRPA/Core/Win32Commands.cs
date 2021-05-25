@@ -16,10 +16,10 @@ namespace sharpRPA.Core.AutomationCommands
         private static extern IntPtr FindWindowNative(string className, string windowName);
         public static IntPtr FindWindow(string windowName)
         {
-            //try to find exact window name
+            //находит точное название окна
             IntPtr hWnd = FindWindowNative(null, windowName);
 
-            //if exact window was not found, try partial match
+            //если точное окно не было найдено, то проходит по совпадениям
             if (hWnd == IntPtr.Zero)
             {
                 var potentialWindow = System.Diagnostics.Process.GetProcesses().Where(prc => prc.MainWindowTitle.Contains(windowName)).FirstOrDefault();
@@ -47,31 +47,31 @@ namespace sharpRPA.Core.AutomationCommands
 
         public enum WindowState
         {
-            [Description("Minimizes a window, even if the thread that owns the window is not responding. This flag should only be used when minimizing windows from a different thread.")]
+            [Description("Сворачивает окно, даже если поток, которому принадлежит окно, не отвечает. Этот флаг следует использовать только при сворачивании окон из другого потока.")]
             SW_FORCEMINIMIZE = 11,
-            [Description("Hides the window and activates another window.")]
+            [Description("Скрывает окно и активирует другое окно.")]
             SW_HIDE = 0,
-            [Description("Maximizes the specified window.")]
+            [Description("Развертывает указанное окно.")]
             SW_MAXIMIZE = 3,
-            [Description("Minimizes the specified window and activates the next top-level window in the Z order.")]
+            [Description("Сворачивает указанное окно и активирует следующее окно верхнего уровня в Z-порядке.")]
             SW_MINIMIZE = 6,
-            [Description("Activates and displays the window. If the window is minimized or maximized, the system restores it to its original size and position. An application should specify this flag when restoring a minimized window.")]
+            [Description("Активирует и отображает окно. Если окно свернуто или развернуто, система восстанавливает его исходный размер и положение. Приложение должно указать этот флаг при восстановлении свернутого окна.")]
             SW_RESTORE = 9,
-            [Description("Activates the window and displays it in its current size and position.")]
+            [Description("Активирует окно и отображает его в текущем размере и положении.")]
             SW_SHOW = 5,
-            [Description("Sets the show state based on the SW_ value specified in the STARTUPINFO structure passed to the CreateProcess function by the program that started the application.")]
+            [Description("Устанавливает состояние показа на основе значения SW_, указанного в структуре STARTUPINFO, переданной в функцию CreateProcess программой, запустившей приложение.")]
             SW_SHOWDEFAULT = 10,
-            [Description("Activates the window and displays it as a maximized window.")]
+            [Description("Активирует окно и отображает его как развернутое окно.")]
             SW_SHOWMAXIMIZED = 3,
-            [Description("Activates the window and displays it as a minimized window.")]
+            [Description("Активирует окно и отображает его как свернутое окно.")]
             SW_SHOWMINIMIZED = 2,
-            [Description("Displays the window as a minimized window. This value is similar to SW_SHOWMINIMIZED, except the window is not activated.")]
+            [Description("Отображает окно в виде свернутого окна. Это значение аналогично SW_SHOWMINIMIZED, за исключением того, что окно не активируется.")]
             SW_SHOWMINNOACTIVE = 7,
-            [Description("Displays the window in its current size and position. This value is similar to SW_SHOW, except that the window is not activated.")]
+            [Description("Отображает окно в его текущем размере и положении. Это значение похоже на SW_SHOW, за исключением того, что окно не активируется.")]
             SW_SHOWNA = 8,
-            [Description("Displays a window in its most recent size and position. This value is similar to SW_SHOWNORMAL, except that the window is not activated.")]
+            [Description("Отображает окно в его последнем размере и положении. Это значение аналогично SW_SHOWNORMAL, за исключением того, что окно не активируется.")]
             SW_SHOWNOACTIVATE = 4,
-            [Description("Activates and displays a window. If the window is minimized or maximized, the system restores it to its original size and position. An application should specify this flag when displaying the window for the first time.")]
+            [Description("Активирует и отображает окно. Если окно свернуто или развернуто, система восстанавливает его исходный размер и положение. Приложение должно указать этот флаг при первом отображении окна.")]
             SW_SHOWNORMAL = 1,
         }
 
