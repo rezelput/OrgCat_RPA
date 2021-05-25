@@ -127,26 +127,20 @@ namespace sharpRPA.UI.Forms
         /// </summary>
         private void GenerateUIInputElements(Core.AutomationCommands.ScriptCommand currentCommand)
         {
-            //remove all existing controls
             while (flw_InputVariables.Controls.Count > 0) flw_InputVariables.Controls.RemoveAt(0);
 
-            //find all input variables -- all input variables start with "v_" in the associated class
             var inputVariableFields = currentCommand.GetType().GetProperties().Where(f => f.Name.StartsWith("v_")).ToList();
 
-            //set form height
             int formHeight = 0;
 
-            //loop through available variables
             foreach (var inputField in inputVariableFields)
             {
-                //create a label for each variable name
                 Label inputLabel = new Label();
                 inputLabel.AutoSize = true;
                 inputLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                 inputLabel.ForeColor = Color.SteelBlue;
                 inputLabel.Name = "lbl_" + inputField.Name;
                 formHeight += 50;
-                //apply friendly translation
                 var propertyAttributesAssigned = inputField.GetCustomAttributes(typeof(Core.AutomationCommands.Attributes.PropertyAttributes.PropertyDescription), true);
 
                 if (propertyAttributesAssigned.Length > 0)
@@ -163,10 +157,8 @@ namespace sharpRPA.UI.Forms
 
                 formHeight += inputControl.Height;
 
-                //add label and input control to flow layout
                 flw_InputVariables.Controls.Add(inputLabel);
 
-                //find if UI helpers are applied
                 var propertyAllowsVars = inputField.GetCustomAttributes(typeof(Core.AutomationCommands.Attributes.PropertyAttributes.PropertyUIHelper), true);
 
                 if (propertyAllowsVars.Length > 0)
@@ -203,21 +195,8 @@ namespace sharpRPA.UI.Forms
                         }
                     }
 
-                    //var attribute = (Core.AutomationCommands.Attributes.PropertyAttributes.PropertyUIHelper)propertyAllowsVars[0];
-                    //if (attribute.propertyAllowsVariables)
-                    //{
-                    //    //show variable selector
-                    //    sharpRPA.UI.CustomControls.CommandItemControl variableInsertion = new sharpRPA.UI.CustomControls.CommandItemControl();
-                    //    variableInsertion.CommandImage = UI.Images.GetUIImage("VariableCommand");
-                    //    variableInsertion.CommandDisplay = "Insert Variable";
-                    //    variableInsertion.ForeColor = Color.Black;
-                    //    variableInsertion.Tag = inputControl;
-                    //    variableInsertion.Click += ShowVariableSelector;
-                    //    flw_InputVariables.Controls.Add(variableInsertion);
-                    //}
+                    
                 }
-
-                //these types get a helper button to launch another form
                 if (inputField.Name == "v_WebSearchTable")
                 {
                     Core.AutomationCommands.IEBrowserElementCommand webCommand = (Core.AutomationCommands.IEBrowserElementCommand)currentCommand;
@@ -240,10 +219,8 @@ namespace sharpRPA.UI.Forms
                     flw_InputVariables.Controls.Add(newitm);
                 }
 
-                //add to flow layout
                 flw_InputVariables.Controls.Add(inputControl);
 
-                //handle edit mode to add combobox data
                 if ((creationMode == CreationMode.Edit) && (currentCommand is Core.AutomationCommands.BeginIfCommand) && (inputControl is DataGridView))
                 {
                     Core.AutomationCommands.BeginIfCommand ifCmd = (Core.AutomationCommands.BeginIfCommand)currentCommand;
@@ -257,7 +234,6 @@ namespace sharpRPA.UI.Forms
                         comparisonComboBox.Items.Add("is less than or equal to");
                         comparisonComboBox.Items.Add("is not equal to");
 
-                        //assign cell as a combobox
                         DataGridView inputCtrl = (DataGridView)inputControl;
                         inputCtrl.Rows[1].Cells[1] = comparisonComboBox;
                     }
@@ -290,47 +266,32 @@ namespace sharpRPA.UI.Forms
             var selectionOptions = inputField.GetCustomAttributes(typeof(Core.AutomationCommands.Attributes.PropertyAttributes.PropertyUISelectionOption));
             if (selectionOptions.Count() > 0)
             {
-                //create combobox for selection item
                 InputControl = new ComboBox();
                 InputControl.Height = 30;
                 InputControl.Width = 250;
                 InputControl.Font = new Font("Segoe UI", 12, FontStyle.Regular);
 
-                //loop through options
                 foreach (Core.AutomationCommands.Attributes.PropertyAttributes.PropertyUISelectionOption option in selectionOptions)
                 {
                     InputControl.Items.Add(option.uiOption);
                 }
 
                 ComboBox control = InputControl;
-                //additional helper for specific fields
-               /* if (inputField.Name == "v_SeleniumElementAction")
-                {
-                    control.SelectedIndexChanged += seleniumAction_SelectionChangeCommitted;
-                }
-                else if (inputField.Name == "v_IfActionType")
-                {
-                    control.SelectedIndexChanged += ifAction_SelectionChangeCommitted;
-                }*/
+                
             }
             else
             {
-                //legacy population method
                 if (inputField.Name == "v_WindowName")
                 {
                     InputControl = new ComboBox();
                     InputControl.Height = 30;
                     InputControl.Width = 200;
-                    //add an option for current window which is the window which is currently in the foreground
                     InputControl.Items.Add("Current Window");
-                    //get all running processes
                     Process[] processlist = Process.GetProcesses();
-                    //pull the main window title for each
                     foreach (Process process in processlist)
                     {
                         if (!String.IsNullOrEmpty(process.MainWindowTitle))
                         {
-                            //add to the control list of available windows
                             InputControl.Items.Add(process.MainWindowTitle);
                         }
                     }
@@ -340,11 +301,8 @@ namespace sharpRPA.UI.Forms
                     InputControl = new ComboBox();
                     InputControl.Height = 30;
                     InputControl.Width = 200;
-                    //add an option for current window which is the window which is currently in the foreground
                     InputControl.Items.Add("Desktop");
-                    //get all running processes
                     Process[] processlist = Process.GetProcesses();
-                    //pull the main window title for each
                     foreach (Process process in processlist)
                     {
                         if (!String.IsNullOrEmpty(process.MainWindowTitle))

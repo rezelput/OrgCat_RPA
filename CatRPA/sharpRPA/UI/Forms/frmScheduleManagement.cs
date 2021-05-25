@@ -22,10 +22,9 @@ namespace sharpRPA.UI.Forms
 
         private void frmScheduleManagement_Load(object sender, EventArgs e)
         {
-            //get path to executing assembly
+            
             txtAppPath.Text = System.Reflection.Assembly.GetEntryAssembly().Location;
 
-            //get path to scripts folder
             rpaScriptsFolder = Core.Common.GetScriptFolderPath();
 
             var files = System.IO.Directory.GetFiles(rpaScriptsFolder);
@@ -36,10 +35,8 @@ namespace sharpRPA.UI.Forms
                 cboSelectedScript.Items.Add(newFileInfo.Name);
             }
 
-            //set autosize mode
             colTaskName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            //call bgw to pull schedule info
             RefreshTasks();
         }
         private void uiBtnOk_Click(object sender, EventArgs e)
@@ -66,15 +63,9 @@ namespace sharpRPA.UI.Forms
 
             using (TaskService ts = new TaskService())
             {
-                // Create a new task definition and assign properties
                 TaskDefinition td = ts.NewTask();
                 td.RegistrationInfo.Description = "Scheduled task from sharpRPA - " + selectedFile;
                 var trigger = new TimeTrigger();
-                ////   // Add a trigger that will fire the task at this time every other day
-                //DailyTrigger dt = (DailyTrigger)td.Triggers.Add(new DailyTrigger(2));
-                //dt.Repetition.Duration = TimeSpan.FromHours(4);
-                //dt.Repetition.Interval = TimeSpan.FromHours()
-                // Create a trigger that will execute very 2 minutes.
 
                 trigger.StartBoundary = dtStartTime.Value;
                 if (rdoEndByDate.Checked)
