@@ -102,7 +102,7 @@ namespace sharpRPA.UI.Forms
             var rpaScriptsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\sharpRPA\\My Scripts\\";
             if (!System.IO.Directory.Exists(rpaScriptsFolder))
             {
-                UI.Forms.Supplemental.frmDialog userDialog = new UI.Forms.Supplemental.frmDialog("Would you like to create a folder to save your scripts in now? A script folder is required to save scripts generated with this application. The new script folder path would be '" + rpaScriptsFolder + "'.", "Unable to locate Script Folder!", UI.Forms.Supplemental.frmDialog.DialogType.YesNo, 0);
+                UI.Forms.Supplemental.frmDialog userDialog = new UI.Forms.Supplemental.frmDialog("Хотели бы вы сейчас создать папку для сохранения ваших скриптов? Папка сценария необходима для сохранения сценариев, созданных с помощью этого приложения. Новый путь к папке сценария будет'" + rpaScriptsFolder + "'.", "Unable to locate Script Folder!", UI.Forms.Supplemental.frmDialog.DialogType.YesNo, 0);
 
                 if (userDialog.ShowDialog() == DialogResult.OK)
                 {

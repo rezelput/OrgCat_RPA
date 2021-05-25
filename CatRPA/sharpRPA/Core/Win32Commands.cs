@@ -242,7 +242,7 @@ namespace sharpRPA.Core.AutomationCommands
 
             var rect = new RECT();
 
-            //sleep to allow repaint
+            //Сон задачи, перед перекрытием
             System.Threading.Thread.Sleep(500);
 
             GetWindowRect(hWnd, out rect);
